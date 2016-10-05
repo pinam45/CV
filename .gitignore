@@ -1,0 +1,12 @@
+#pdfTex
+*.aux
+*.log
+*.out
+*.gz
+
+#Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+#Others
+*.directory
