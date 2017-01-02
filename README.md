@@ -1,6 +1,6 @@
 # What is this
 
-This is a repository that contains my up-to-date CV in LaTeX. There is two versions, PDF and HTML, the HTML version is used on my website [maxime.pinard.info](http://maxime.pinard.info/CV.php)
+This is a repository that contains my up-to-date CV in LaTeX. There is two versions, PDF and HTML, the HTML version is used on my website [maxime.pinard.info](http://maxime.pinard.info/CV)
 
 
 # How to build
@@ -16,8 +16,6 @@ This is a repository that contains my up-to-date CV in LaTeX. There is two versi
 Use xelatex with the following command:
 
 ``xelatex MPinard_CV.tex``
-
-Actually not working on Linux, online version is built with Windows and Miktex
 
 ## HTML version
 
