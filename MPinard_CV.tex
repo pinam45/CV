@@ -9,6 +9,7 @@
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage[firstyear=2011,lastyear=2017]{moderntimeline}
+\usepackage{datenumber,fp}
 \usepackage{fontawesome}
 %\usepackage{academicons}
 
@@ -20,14 +21,14 @@
 %   Packages internal commands redefinitions
 %-------------------------------------------
 
-%--> adding birthdate
+%--> adding preinfo
 
 %\makeatletter % changes the catcode of @ to 11
 %modify here packages internal commands
 %\makeatother % changes the catcode of @ back to 12
 
 \makeatletter
-\newcommand*{\birthdate}[1]{\def\@birthdate{#1}}
+\newcommand*{\preinfo}[1]{\def\@preinfo{#1}}
 
 % optional maketitle width to force a certain width (if set to 0pt, the width is calculated automatically)
 \newlength{\makecvtitlenamewidth}
@@ -46,7 +47,7 @@
   \savebox{\makecvtitledetailsbox}{%
     \addressfont\color{color2}%
     \begin{tabular}[b]{@{}r@{}}%
-    \ifthenelse{\isundefined{\@birthdate}}{}{\makenewline{\@birthdate}}%
+    \ifthenelse{\isundefined{\@preinfo}}{}{\makenewline{\@preinfo}}%
       \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
         \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
         \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
@@ -77,7 +78,7 @@
     {}%
   \begin{minipage}[b]{\makecvtitlenamewidth}%
     \namestyle{\@firstname\ \@lastname}%
-    \ifthenelse{\equal{\@title}{}}{}{\\[1.25em]\titlestyle{\@title}}
+    \ifthenelse{\equal{\@title}{}}{}{\raggedright\\[1.25em]\titlestyle{\@title}}
   \end{minipage}%
   \hfill%
   % optional detailed information (rendering)
@@ -105,8 +106,8 @@
 \AtBeginDocument{%
 
 % fonts
-\renewcommand*{\namefont}{\fontsize{40}{46}\mdseries\upshape}
-%\renewcommand*{\titlefont}{\Huge\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{38}{45}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{13}{14}\mdseries\upshape}
 %\renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
 %\renewcommand*{\quotefont}{\large\slshape}
 %\renewcommand*{\sectionfont}{\Large\mdseries\upshape}
@@ -149,6 +150,18 @@
 }
 
 %-------------------------------------------
+%   Age computation
+%-------------------------------------------
+
+\newcounter{birthday}
+\newcounter{today}
+\setmydatenumber{birthday}{1996}{06}{19}
+\setmydatenumber{today}{\the\year}{\the\month}{\the\day}
+\FPsub\result{\thetoday}{\thebirthday}
+\FPdiv\myage{\result}{365.2425}
+\FPround\myage{\myage}{0}
+
+%-------------------------------------------
 %   ModernCV theme
 %-------------------------------------------
 
@@ -161,10 +174,10 @@
 %   PERSONAL DATA
 %----------------------------------------------------------------------------------------
 
-\birthdate{19/06/96}
+\preinfo{\myage{} ans, célibataire}
 \firstname{Maxime}
 \familyname{Pinard}
-\title{curriculum vitae}
+\title{Élève-ingénieur en 1ère année d'informatique, je cherche une mission d’assistant ingénieur pour automne 2017}
 \address{2 Avenue d'Alsace}{70400 Héricourt}
 \mobile{+33~(0)~687~925~509}
 %\phone{}
@@ -185,14 +198,14 @@
 
 \begin{document}
 	\maketitle
-	\vspace*{-7mm}
+	\vspace*{-12mm}
 
 %-------------------------------------------
 %   Cursus
 %-------------------------------------------
 
 	\section{Cursus}
-		\tlcventry{2016}{0}{Diplome d'ingénieur informatique}{UTBM}{Belfort}{\textit{Bac+5}}{}
+		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{UTBM}{Belfort}{\textit{Bac+5}}{}
 		\tlcventry{2014}{2016}{DEUTEC}{UTBM}{Sèvenans}{\textit{Bac+2}}{}
 		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt}{\small\textit{Mention Bien}}{}
 		%\tldatecventry{2008}{Baccalauréat S option Science de l'ingénieur}{Lycée Louis-Feuillade}{Lunel}{}{}
@@ -211,7 +224,7 @@
 
 	\section{Compétances informatiques}
 		\subsection{Languages}
-			\cvdoubleitem{Maitrisés}{C, C++, JAVA, HTML/CSS.}{Abordés}{VBA, UPC, PHP, SQL, VHDL.}
+			\cvdoubleitem{Maitrisés}{C, C++, JAVA, \LaTeX ,HTML/CSS, Assembleur.}{Connus}{VBA, UPC, CUDA, PHP, SQL, VHDL.}
 			%\cvline{Abordés}{VBA, UPC, PHP, SQL.}
 		\subsection{Autres}
 			\cvitem{Systèmes d'expoilations}{GNU/Linux, Microsoft Windows}
@@ -222,16 +235,16 @@
 %-------------------------------------------
 
 	\section{Projets}
-		\cvline{Mini-jeux}{Snake like multijoueur (réseau local) en C++ (SFML), Dungeon crawler en JAVA (JavaFx)}
-		\cvline{Utilitaire}{Serveur de stockage de fichiers multi-utilisateurs en C++ (SFML)}
+		\cvline{Mini-jeux}{Snake like multijoueur (réseau local) en C++ (SFML), Dungeon crawler en JAVA (JavaFx), Simulateur de gestion de métros en JAVA (JavaFx), Jeu de la vie de Conway en SARL (langage orienté agents).}
+		\cvline{Utilitaire}{Serveur de stockage de fichiers multi-utilisateurs en C++ (SFML).}
 
 %-------------------------------------------
 %   Languages
 %-------------------------------------------
 
 	\section{Langues}
-		\cvdoubleitem{\bfseries Français}{\cvskill{}{5} Langue maternelle}{\bfseries Espagnol}{\cvskill{}{3} B1}
-		\cvdoubleitem{\bfseries Anglais}{\cvskill{}{4} B2}{\bfseries Japonais}{\cvskill{}{2} A2}
+		\cvdoubleitem{\bfseries Français}{\cvskill{}{5} Langue maternelle}{\bfseries Espagnol}{\cvskill{}{3} B1, niveau scolaire}
+		\cvdoubleitem{\bfseries Anglais}{\cvskill{}{4} B2, usage professionnel}{\bfseries Japonais}{\cvskill{}{2} A2, élémentaire}
 
 %-------------------------------------------
 %   Professional experience
@@ -248,8 +261,8 @@
 %-------------------------------------------
 
 	\section{Centres d'intérêts}
-		\cvline{L'informatique}{Programmation, intelligence artificielle, cryptographie\ldots}
-		\cvline{Les sciences}{Mathématiques, physique théorique\ldots}
+		\cvline{L'informatique}{Les nouveaux paradigmes de programmation, la génération procédurale, l'intelligence artificielle, la cryptographie\ldots{}, leur mise en pratique, et l'évolution de l'informatique quantique.}
+		\cvline{Les sciences}{Les mathématiques, l'informatique théorique, la physique théorique\ldots}
 		\cvline{Le sport}{Ski, vélo, marche\ldots}
 
 \end{document}
