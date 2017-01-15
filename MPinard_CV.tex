@@ -8,7 +8,7 @@
 %\usepackage[scale=0.975]{geometry}
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 \usepackage{graphicx}
-\usepackage[firstyear=2011,lastyear=2017]{moderntimeline}
+\usepackage[firstyear=2011,lastyear=2018]{moderntimeline}
 \usepackage{datenumber,fp}
 \usepackage{fontawesome}
 %\usepackage{academicons}
@@ -149,6 +149,8 @@
   \space{\ifnumgreater{\x}{#2}{\color{color1!30}}{\color{color1}}\faCircle}}%
 }
 
+\newcommand{\deletedSpace}{-2.5mm}
+
 %-------------------------------------------
 %   Age computation
 %-------------------------------------------
@@ -177,7 +179,7 @@
 \preinfo{\myage{} ans, célibataire}
 \firstname{Maxime}
 \familyname{Pinard}
-\title{Élève-ingénieur en 1ère année d'informatique, je cherche une mission d’assistant ingénieur pour automne 2017}
+\title{Élève-ingénieur informatique en 3ème année, je cherche une mission d’assistant ingénieur pour automne 2017}
 \address{2 Avenue d'Alsace}{70400 Héricourt}
 \mobile{+33~(0)~687~925~509}
 %\phone{}
@@ -190,6 +192,7 @@
 }
 \photo[70pt]{MPinard.jpg}
 %\quote{Objectif: Intégrer une équipe au sein d'un projet novateur en tant que développeur informatique.}
+%\quote{Passionné d'informatique et de jeux vidéo, je me forme pour travailler sur des projets qui a la rencontre de mes deux passions.}
 
 
 %----------------------------------------------------------------------------------------
@@ -198,22 +201,22 @@
 
 \begin{document}
 	\maketitle
-	\vspace*{-12mm}
+	\vspace*{-14mm}
 
 %-------------------------------------------
 %   Cursus
 %-------------------------------------------
 
 	\section{Cursus}
-		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{UTBM}{Belfort}{\textit{Bac+5}}{}
-		\tlcventry{2014}{2016}{DEUTEC}{UTBM}{Sèvenans}{\textit{Bac+2}}{}
-		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt}{\small\textit{Mention Bien}}{}
-		%\tldatecventry{2008}{Baccalauréat S option Science de l'ingénieur}{Lycée Louis-Feuillade}{Lunel}{}{}
+		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{UTBM}{Belfort}{\textit{Bac+5 (eq. Master degree)}}{Actuellement en 3ème année, \textit{Bac+3 (eq. Bachelor degree)}}
+		\tlcventry{2014}{2016}{DEUTEC}{UTBM}{Sèvenans}{\textit{Bac+2}}{Tronc Commun avant choix de la filière diplomante}
+		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt}{\small\textit{Mention Bien (eq. DEC)}}{}
 
 %-------------------------------------------
 %   Certificates
 %-------------------------------------------
 
+  \vspace*{\deletedSpace}
 	\section{Certifications autres}
 		\cvlistitem{Permis de conduire}{}
 		\cvlistitem{Prévention et Secours Civiques de niveau 1 (PSC1)}{}
@@ -222,18 +225,21 @@
 %   Languages
 %-------------------------------------------
 
+  \vspace*{\deletedSpace}
 	\section{Compétances informatiques}
 		\subsection{Languages}
-			\cvdoubleitem{Maitrisés}{C, C++, JAVA, \LaTeX ,HTML/CSS, Assembleur.}{Connus}{VBA, UPC, CUDA, PHP, SQL, VHDL.}
-			%\cvline{Abordés}{VBA, UPC, PHP, SQL.}
+			%\cvdoubleitem{Maitrisés}{C, C++, JAVA, \LaTeX ,HTML/CSS.}{Connus}{VBA, UPC, CUDA, PHP, SQL, VHDL, Assembleur.}
+      \cvline{Usage fréquent}{C, C++, Java (SE et EE), \LaTeX ,HTML/CSS.}
+			\cvline{Connus}{VBA, UPC, CUDA, PHP, SQL, VHDL, Assembleur.}
 		\subsection{Autres}
-			\cvitem{Systèmes d'expoilations}{GNU/Linux, Microsoft Windows}
-			\cvitem{Suites logiciels}{Microsoft Office, Adobe CC, Xcas, Maxima\ldots}
+			\cvitem{Systèmes d'exploitations}{GNU/Linux, Microsoft Windows}
+			\cvitem{Suites logiciels}{git, Microsoft Office, JetBrains, Adobe CC, Xcas, Maxima\ldots}
 
 %-------------------------------------------
 %   Projects
 %-------------------------------------------
 
+  \vspace*{\deletedSpace}
 	\section{Projets}
 		\cvline{Mini-jeux}{Snake like multijoueur (réseau local) en C++ (SFML), Dungeon crawler en JAVA (JavaFx), Simulateur de gestion de métros en JAVA (JavaFx), Jeu de la vie de Conway en SARL (langage orienté agents).}
 		\cvline{Utilitaire}{Serveur de stockage de fichiers multi-utilisateurs en C++ (SFML).}
@@ -242,6 +248,7 @@
 %   Languages
 %-------------------------------------------
 
+  \vspace*{\deletedSpace}
 	\section{Langues}
 		\cvdoubleitem{\bfseries Français}{\cvskill{}{5} Langue maternelle}{\bfseries Espagnol}{\cvskill{}{3} B1, niveau scolaire}
 		\cvdoubleitem{\bfseries Anglais}{\cvskill{}{4} B2, usage professionnel}{\bfseries Japonais}{\cvskill{}{2} A2, élémentaire}
@@ -250,6 +257,7 @@
 %   Professional experience
 %-------------------------------------------
 
+  \vspace*{\deletedSpace}
 	\section{Expériences Professionnelles}
 		%\tlcventry{2015/1}{2015/2}{sdgfds}{dsgf}{sdgf}
 		\tllabelcventry{2016/2}{2016/2}{Févr 2016}{Animateur}{JAB France}{Evolène}{Camp de ski de 40 jeunes, équipe de 15 animateurs}{}
@@ -260,6 +268,7 @@
 %   Interests
 %-------------------------------------------
 
+  \vspace*{\deletedSpace}
 	\section{Centres d'intérêts}
 		\cvline{L'informatique}{Les nouveaux paradigmes de programmation, la génération procédurale, l'intelligence artificielle, la cryptographie\ldots{}, leur mise en pratique, et l'évolution de l'informatique quantique.}
 		\cvline{Les sciences}{Les mathématiques, l'informatique théorique, la physique théorique\ldots}
