@@ -1,24 +1,29 @@
 # What is this
 
-This is a repository that contains my up-to-date CV in LaTeX. There is two versions, PDF and HTML, the HTML version is used on my website [maxime.pinard.info](http://maxime.pinard.info/CV)
+This is a repository that contains my up-to-date CV in LaTeX. There is three versions:
+- **FR**: French version for France
+- **FR_QC**: French version for Quebec
+- **EN_US**: English version the United States
 
+Each versions can be compiled in PDF and HTML, the HTMLs are accessible from my website [maxime.pinard.info](http://maxime.pinard.info/CV)
 
 # How to build
 
-## PDF version
+## Requirements
 
-### Requirements
+- A LaTex distribution such as [TeX Live](http://tug.org/texlive)
+- [FontAwesome](http://fontawesome.io/) installed on your system
+- [LuaTex](http://www.luatex.org/) or XeTeX to generate the PDFs
+- [pdf2htmlex](https://github.com/coolwanglu/pdf2htmlEX) to generate the HTMLs from the PDFs
 
-[FontAwesome](http://fontawesome.io/) installed on your system.
+## Build
 
-### Build
+To build, a *Makefile* is available.
 
-Use xelatex with the following command:
+To build PDFs and HTMLs:
 
-``xelatex MPinard_CV.tex``
+``make``
 
-## HTML version
+Only the PDFs:
 
-The HTML version is generated from the PDF version, using [pdf2htmlex](https://github.com/coolwanglu/pdf2htmlEX) with the following command:
-
-``pdf2htmlEX --process-outline 0 --zoom 1.3 MPinard_CV.pdf``
+``make pdf``
