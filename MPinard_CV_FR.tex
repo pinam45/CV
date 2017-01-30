@@ -129,15 +129,19 @@
 %   Symbols from FontAwesome
 %-------------------------------------------
 
-%\newcommand{\emailsymbol}{\faAt}
-%\newcommand{\phonesymbol}{\faPhone}
-%\newcommand{\homepagesymbol}{\faChain}
-%\newcommand{\locationsymbol}{\faMapMarker}
-\newcommand{\linkedinsymbol}{\faLinkedin}
-%\newcommand{\twittersymbol}{\faTwitter}
-\newcommand{\githubsymbol}{\faGithub}
-%\newcommand{\orcidsymbol}{\aiOrcid}
-%\newcommand{\mailsymbol}{\faEnvelope}
+\AtBeginDocument{%
+
+\renewcommand*{\addresssymbol}       {\faMapMarker\ }
+\renewcommand*{\mobilephonesymbol}   {\faMobile\ }
+\renewcommand*{\fixedphonesymbol}    {\foPhone\ }
+\renewcommand*{\faxphonesymbol}      {\faFax\ }
+\renewcommand*{\emailsymbol}         {\faEnvelopeO\ }
+\renewcommand*{\homepagesymbol}      {\faGlobe\ }
+\renewcommand*{\linkedinsocialsymbol}{\faLinkedin\ }
+\renewcommand*{\twittersocialsymbol} {\faTwitter\ }
+\renewcommand*{\githubsocialsymbol}  {\faGithub\ }
+
+}
 
 %-------------------------------------------
 %   Commands definitions
@@ -149,7 +153,7 @@
   \space{\ifnumgreater{\x}{#2}{\color{color1!30}}{\color{color1}}\faCircle}}%
 }
 
-\newcommand{\deletedSpace}{-2.5mm}
+\newcommand{\deletedSpace}{-2.85mm}
 
 %-------------------------------------------
 %   Age computation
@@ -176,7 +180,9 @@
 %   PERSONAL DATA
 %----------------------------------------------------------------------------------------
 
-\preinfo{\myage{} ans, célibataire}
+\preinfo{%
+  \faUser\ \myage{} ans, célibataire
+}
 \firstname{Maxime}
 \familyname{Pinard}
 \title{Élève-ingénieur informatique en 3ème année, je cherche une mission d’assistant ingénieur pour automne 2017}
@@ -185,14 +191,14 @@
 %\phone{}
 %\fax{}
 \email{maxime.pin@live.fr}
-%\homepage{http://pinard-maxime.96.lt/}
+%\homepage{maxime.pinard.info}
 \extrainfo{%
-	\linkedinsymbol\ \httplink{linkedin.com/in/maxime-pinard}\\
-	\githubsymbol\ \httplink{github.com/pinam45}
+	\linkedinsocialsymbol\ \httplink{linkedin.com/in/maxime-pinard}\\
+	\githubsocialsymbol\ \httplink{github.com/pinam45}
 }
 \photo[70pt]{MPinard.jpg}
 %\quote{Objectif: Intégrer une équipe au sein d'un projet novateur en tant que développeur informatique.}
-%\quote{Passionné d'informatique et de jeux vidéo, je me forme pour travailler sur des projets qui a la rencontre de mes deux passions.}
+%\quote{Passionné d'informatique et de jeux vidéo, je me forme pour travailler sur des projets a la rencontre de mes deux passions.}
 
 
 %----------------------------------------------------------------------------------------
@@ -201,19 +207,19 @@
 
 \begin{document}
 	\maketitle
-	\vspace*{-14mm}
+	\vspace*{-16mm}
 
 %-------------------------------------------
-%   Cursus
+%   Course
 %-------------------------------------------
 
 	\section{Cursus}
-		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{UTBM}{Belfort}{\textit{Bac+5 (eq. Master degree)}}{Actuellement en 3ème année, \textit{Bac+3 (eq. Bachelor degree)}}
-		\tlcventry{2014}{2016}{DEUTEC}{UTBM}{Sèvenans}{\textit{Bac+2}}{Tronc Commun avant choix de la filière diplomante}
-		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt}{\small\textit{Mention Bien (eq. DEC)}}{}
+		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{Université de Technologie de Belfort-Montbéliard}{Belfort}{\textit{Bac+5}}{Actuellement en 3ème année, \textit{Bac+3}}
+		\tlcventry{2014}{2016}{DEUTEC}{Université de Technologie de Belfort-Montbéliard}{Sèvenans}{\textit{Bac+2}}{Tronc Commun avant choix de la filière diplômante}
+		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt}{\small\textit{Mention Bien}}{}
 
 %-------------------------------------------
-%   Certificates
+%   Others qualifications
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
@@ -222,18 +228,18 @@
 		\cvlistitem{Prévention et Secours Civiques de niveau 1 (PSC1)}{}
 
 %-------------------------------------------
-%   Languages
+%   Computer skills
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
-	\section{Compétances informatiques}
-		\subsection{Languages}
+	\section{Compétences informatiques}
+		\subsection{Langages}
 			%\cvdoubleitem{Maitrisés}{C, C++, JAVA, \LaTeX ,HTML/CSS.}{Connus}{VBA, UPC, CUDA, PHP, SQL, VHDL, Assembleur.}
       \cvline{Usage fréquent}{C, C++, Java (SE et EE), \LaTeX ,HTML/CSS.}
-			\cvline{Connus}{VBA, UPC, CUDA, PHP, SQL, VHDL, Assembleur.}
+			\cvline{Connus}{C\#, VBA, UPC, CUDA, PHP, SQL, VHDL, Assembleur.}
 		\subsection{Autres}
-			\cvitem{Systèmes d'exploitations}{GNU/Linux, Microsoft Windows}
-			\cvitem{Suites logiciels}{git, Microsoft Office, JetBrains, Adobe CC, Xcas, Maxima\ldots}
+			\cvitem{Systèmes d’exploitation}{GNU/Linux, Microsoft Windows}
+			\cvitem{Suites logiciels}{Unity, git, Microsoft Office, JetBrains, Adobe CC, Xcas, Maxima\ldots}
 
 %-------------------------------------------
 %   Projects
@@ -242,7 +248,7 @@
   \vspace*{\deletedSpace}
 	\section{Projets}
 		\cvline{Mini-jeux}{Snake like multijoueur (réseau local) en C++ (SFML), Dungeon crawler en JAVA (JavaFx), Simulateur de gestion de métros en JAVA (JavaFx), Jeu de la vie de Conway en SARL (langage orienté agents).}
-		\cvline{Utilitaire}{Serveur de stockage de fichiers multi-utilisateurs en C++ (SFML).}
+		\cvline{Utilitaires}{Serveur de stockage de fichiers multi-utilisateurs en C++ (SFML), Captation des mouvement d'une personne et transmission réseau vers un avatar en réalité augmentée avec Unity (scripting en C\#), Kinect et Vuforia.}
 
 %-------------------------------------------
 %   Languages
@@ -254,13 +260,12 @@
 		\cvdoubleitem{\bfseries Anglais}{\cvskill{}{4} B2, usage professionnel}{\bfseries Japonais}{\cvskill{}{2} A2, élémentaire}
 
 %-------------------------------------------
-%   Professional experience
+%   Work experience
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
 	\section{Expériences Professionnelles}
-		%\tlcventry{2015/1}{2015/2}{sdgfds}{dsgf}{sdgf}
-		\tllabelcventry{2016/2}{2016/2}{Févr 2016}{Animateur}{JAB France}{Evolène}{Camp de ski de 40 jeunes, équipe de 15 animateurs}{}
+		\tllabelcventry{2016/2}{2016/2}{Févr 2016}{Animateur}{JAB France}{Evolène, Suisse}{Camp de ski de 40 jeunes, équipe de 15 animateurs}{}
 		\tllabelcventry{2015/2}{2015/3}{Janv--Févr 2015}{Animateur}{JAB France}{Contamines}{Camp de ski de 50 jeunes, équipe de 20 animateurs}{}
 		\tllabelcventry{2015/1}{2015/2}{Janv--Févr 2015}{Stagiaire}{Souchier SAS}{Héricourt}{Jointage et montage d'appareils de désenfumage}{}
 
