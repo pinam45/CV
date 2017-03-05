@@ -167,7 +167,7 @@
 \setmydatenumber{today}{\the\year}{\the\month}{\the\day}
 \FPsub\result{\thetoday}{\thebirthday}
 \FPdiv\myage{\result}{365.2425}
-\FPround\myage{\myage}{0}
+\FPtrunc\myage{\myage}{0}
 
 %-------------------------------------------
 %   ModernCV theme
