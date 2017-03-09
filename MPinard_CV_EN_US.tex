@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[10pt,a4paper,sans]{moderncv}
 
 %----------------------------------------------------------------------------------------
 %   PACKAGES
@@ -11,6 +11,7 @@
 \usepackage[firstyear=2011,lastyear=2018]{moderntimeline}
 \usepackage{datenumber,fp}
 \usepackage{fontawesome}
+%\usepackage{mnsymbol}
 %\usepackage{academicons}
 
 %----------------------------------------------------------------------------------------
@@ -107,7 +108,7 @@
 \AtBeginDocument{%
 
 % fonts
-\renewcommand*{\namefont}{\fontsize{38}{45}\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{42}{48}\mdseries\upshape}
 \renewcommand*{\titlefont}{\fontsize{13}{14}\mdseries\upshape}
 %\renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
 %\renewcommand*{\quotefont}{\large\slshape}
@@ -155,8 +156,11 @@
   \space{\ifnumgreater{\x}{#2}{\color{color1!30}}{\color{color1}}\faCircle}}%
 }
 
+% Colored href
+\newcommand{\Chref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
 % Space to delete between the sections
-\newcommand{\deletedSpace}{-2.2mm}
+\newcommand{\deletedSpace}{-0.9mm}
 
 %-------------------------------------------
 %   Age computation
@@ -188,20 +192,21 @@
 }
 \firstname{Maxime}
 \familyname{Pinard}
-\title{Currently 3rd year student in a Computer Science and Engineering program leading to an engineer degree, I'm looking for a internship as assistant engineer for autumn 2017}
+\title{Currently 3rd year student in a Computer Science and Engineering program leading to an engineer degree, I'm looking for a 6 month internship as assistant engineer for September 2017}
 \address{2 Avenue d'Alsace}{70400 Héricourt, France}
-\mobile{+33~(0)~687~925~509}
-%\phone{}
-%\fax{}
+\phone[mobile]{+33~(0)~687~925~509}
+%\phone[fixed]{}
+%\phone[fax]{}
 \email{maxime.pin@live.fr}
-%\homepage{maxime.pinard.info}
-\extrainfo{%
-	\linkedinsocialsymbol\httplink{linkedin.com/in/maxime-pinard}\\
-	\githubsocialsymbol\httplink{github.com/pinam45}
-}
+\homepage{maxime.pinard.info}
+\social[linkedin]{maxime-pinard}
+\social[github]{pinam45}
+%\extrainfo{%
+% extra info
+%}
 %\photo[70pt]{MPinard.jpg}
 %\quote{Objectif: Intégrer une équipe au sein d'un projet novateur en tant que développeur informatique.}
-%\quote{Passionné d'informatique et de jeux vidéo, je me forme pour travailler sur des projets qui a la rencontre de mes deux passions.}
+%\quote{Passionné d'informatique et de jeux vidéo, je me forme pour travailler sur des projets a la rencontre de mes deux passions.}
 
 
 %----------------------------------------------------------------------------------------
@@ -217,40 +222,37 @@
 %-------------------------------------------
 
 	\section{Education and qualifications}
-		\tlcventry{2016}{0}{Computer science engineer diploma, imaging specialty}{University of Technology of Belfort Montbéliard}{Belfort, France}{\textit{5 years (eq. Master of Science)}}{Currently in 3rd year}
-		\tlcventry{2014}{2016}{DEUTEC}{University of Technology of Belfort Montbéliard}{Sèvenans, France}{\textit{2 years}}{Common core (preparatory classes) before the specialization}
+		\tlcventry{2016}{0}{Computer science engineer diploma, imaging specialty}{University of Technology of Belfort Montbéliard}{Belfort, France}{\textit{5 years (eq. Master of Science)}}
+    %{{\fontsize{12}{0}\textcolor{color1}{$\filledmedtriangleright$}} Currently in 3rd year}
+    {Currently in 3rd year}
+		\tlcventry{2014}{2016}{DEUTEC}{University of Technology of Belfort Montbéliard}{Sèvenans, France}{\textit{2 years}}{Preparatory classes before the specialization}
 		\tlcventry{2011}{2014}{Baccalauréat with major in maths, \textit{with honours}}{Lycée Louis Aragon (high school)}{Héricourt, France}{}{}
-
-%-------------------------------------------
-%   Others qualifications
-%-------------------------------------------
-
-  \vspace*{\deletedSpace}
-	\section{Others qualifications}
-		%\cvlistitem{French driving license}{}
-		\cvlistitem{PSC1 (Prévention et Secours Civiques 1), \textit{First aid certification}}{}
 
 %-------------------------------------------
 %   Computer skills
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
-	\section{Computer skills}
-		\subsection{Programming languages}
-      \cvline{frequent use}{C, C++, Java (SE and EE), \LaTeX ,HTML/CSS.}
-			\cvline{known}{C\#, VBA, UPC, CUDA, PHP, SQL, VHDL, Assembly.}
-		\subsection{Others}
-			\cvitem{Operating systems}{GNU/Linux, Microsoft Windows}
-			\cvitem{Software suites}{Visual Studio, JetBrains, Eclipse, Unity, git, Microsoft Office, Adobe CC, Xcas, Maxima\ldots}
+  \section{Computer skills}
+    \cvline{Languages}{C++, Java 8 (SE and EE), C\#, \LaTeX, SARL, Bash, CUDA, SQL, HTML/CSS, Assembly, VBA\ldots}
+    \cvline{Tools}{UML, git, Maven, CMake, Make}
+    \cvitem{System administration}{GNU/Linux (Debian 8), personal server for Java EE web hosting (Tomcat 8)}
+    \cvline{Lib}{SFML, Qt, JavaFx, JUnit4}
+    \cvline{IDE}{Visual Studio, JetBrains IntelliJ IDEA and CLion, Eclipse}
+    \cvline{Softwares}{Unity (+ package Vuforia AR and SteamVR for HTC Vive)}
 
 %-------------------------------------------
 %   Projects
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
-	\section{Projects}
-		\cvline{Mini-games}{Snake like multi-player (local network) in C++ (SFML), Dungeon crawler in JAVA (JavaFx), Subway management simulator in JAVA (JavaFx), Conway's Game of Life in SARL (agent oriented programming language).}
-		\cvline{Utility}{Multi-user file storage server in C++ (SFML), Capture of a person’s movement and transmission by network to an avatar in augmented reality with Unity (C\# scripting), Kinect and Vuforia.}
+  \section{Projets}
+    \cvlistitem{Capture of a person’s movement and transmission by network to an avatar in augmented reality with Unity (C\# scripting), Kinect and Vuforia}
+    \cvitemwithcomment{}{\listitemsymbol Subway management simulator in JAVA with JavaFx (MiniMetro clone)}{\Chref[color1]{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
+    \cvitemwithcomment{}{\listitemsymbol Conway's Game of Life in SARL (agent oriented programming language)}{\Chref[color1]{https://github.com/TiWinDeTea/sarl-game-of-life}{sarl game of life}}
+    \cvitemwithcomment{}{\listitemsymbol Dungeon crawler in JAVA with JavaFx}{\Chref[color1]{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul the Game}}
+    \cvitemwithcomment{}{\listitemsymbol Snake like multi-player (local network) in C++ with SFML}{\Chref[color1]{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
+    \cvlistitem{Multi-user file storage server in C++ with SFML}
 
 %-------------------------------------------
 %   Languages
@@ -259,7 +261,7 @@
   \vspace*{\deletedSpace}
 	\section{Languages}
 		\cvdoubleitem{\bfseries French}{\cvskill{}{5} Native tongue}{\bfseries Spanish}{\cvskill{}{3} B1, Moderate level}
-		\cvdoubleitem{\bfseries English}{\cvskill{}{4} B2, Professional working level}{\bfseries Japanese}{\cvskill{}{2} A2, Basic level}
+		\cvdoubleitem{\bfseries English}{\cvskill{}{4} B2 {\footnotesize (BULATS 68)}, Professional working level}{\bfseries Japanese}{\cvskill{}{2} A2, Basic level}
 
 %-------------------------------------------
 %   Work experience
@@ -272,13 +274,22 @@
 		\tllabelcventry{2015/1}{2015/2}{Jan.--Feb. 2015}{Intern}{Souchier SAS}{Héricourt, France}{Installation of gaskets and assembly of smoke evacuation systems}{}
 
 %-------------------------------------------
+%   Others qualifications
+%-------------------------------------------
+
+  \vspace*{\deletedSpace}
+  \section{Others qualifications}
+    %\cvlistitem{French driving license}{}
+    \cvlistitem{PSC1, \textit{French first aid certification}}{}
+
+%-------------------------------------------
 %   Interests
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
 	\section{Interests}
 		\cvline{Computer science}{New programming paradigms, procedural generation, artificial intelligence, cryptography\ldots, their implementation, and the evolution of quantum computing.}
-		\cvline{Science}{Mathematics, theoretical computer science, theoretical physics\ldots}
+		\cvline{Science}{Mathematics, theoretical physics, quantum physics\ldots}
 		\cvline{Sport}{Skiing, cycling, walking\ldots}
 
 \end{document}
