@@ -6,7 +6,7 @@
 
 \usepackage[utf8]{inputenc}
 %\usepackage[scale=0.975]{geometry}
-\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\usepackage[top=0.85cm, bottom=0.85cm, left=0.85cm, right=0.85cm]{geometry}
 \usepackage{graphicx}
 \usepackage[firstyear=2011,lastyear=2018]{moderntimeline}
 \usepackage{datenumber,fp}
@@ -77,9 +77,11 @@
   \ifthenelse{\lengthtest{\makecvtitlenamewidth=0pt}}% check for dummy value (equivalent to \ifdim\makecvtitlenamewidth=0pt)
     {\setlength{\makecvtitlenamewidth}{\textwidth-\makecvtitledetailswidth-\makecvtitlepicturewidth}}%
     {}%
-  \begin{minipage}[b]{\makecvtitlenamewidth}%
-    \namestyle{\@firstname\ \@lastname}%
-    \ifthenelse{\equal{\@title}{}}{}{\raggedright\\[1.25em]\titlestyle{\@title}}
+  \begin{minipage}[b]{\makecvtitlenamewidth - 10mm}%
+    \raggedright
+    \titlestyle{\@title}\\
+    \hfill\\
+    \namestyle{\@firstname\ \@lastname}
   \end{minipage}%
   \hfill%
   % optional detailed information (rendering)
@@ -89,7 +91,7 @@
   % optional quote
   \ifthenelse{\isundefined{\@quote}}%
     {}%
-    {{\centering\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
+    {{\centering\begin{minipage}{\quotewidth}\vspace*{\quoteDeletedSpace}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
   \par}% to avoid weird spacing bug at the first section if no blank line is left after \makecvtitle
 \makeatother
 
@@ -108,17 +110,17 @@
 \AtBeginDocument{%
 
 % fonts
-\renewcommand*{\namefont}{\fontsize{42}{48}\mdseries\upshape}
-\renewcommand*{\titlefont}{\fontsize{13}{14}\mdseries\upshape}
+\renewcommand*{\titlefont}{\fontsize{25}{14}\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{19}{14}\mdseries\upshape}
 %\renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
 %\renewcommand*{\quotefont}{\large\slshape}
-%\renewcommand*{\sectionfont}{\Large\mdseries\upshape}
-%\renewcommand*{\subsectionfont}{\large\mdseries\upshape}
-%\renewcommand*{\hintfont}{}
+%\renewcommand*{\sectionfont}{\Large\bfseries\upshape}
+%\renewcommand*{\subsectionfont}{\large\upshape\fontseries{sb}\selectfont}
+%\renewcommand*{\hintfont}{\bfseries}
 
 % styles
-%\renewcommand*{\namestyle}[1]{{\namefont\textcolor{color1}{#1}}}
-%\renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color2!85}{#1}}}
+\renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color1}{#1}}}
+\renewcommand*{\namestyle}[1]{{\namefont\textcolor{color2!85}{#1}}}
 %\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color2}{#1}}}
 %\renewcommand*{\quotestyle}[1]{{\quotefont\textcolor{color1}{#1}}}
 %\renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
@@ -160,7 +162,10 @@
 \newcommand{\Chref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
 
 % Space to delete between the sections
-\newcommand{\deletedSpace}{-0.9mm}
+\newcommand{\deletedSpace}{-3mm}
+
+% Space to delete before the quote
+\newcommand{\quoteDeletedSpace}{-5mm}
 
 %-------------------------------------------
 %   Age computation
@@ -192,12 +197,12 @@
 }
 \firstname{Maxime}
 \familyname{Pinard}
-\title{Currently 3rd year student in a Computer Science and Engineering program leading to an engineer degree, I'm looking for a 6 month internship as assistant engineer for September 2017}
+\title{Intern as assistant engineer}
 \address{2 Avenue d'Alsace}{70400 Héricourt, France}
 \phone[mobile]{+33~(0)~687~925~509}
 %\phone[fixed]{}
 %\phone[fax]{}
-\email{maxime.pin@live.fr}
+\email{maxime.pinard@utbm.fr}
 \homepage{maxime.pinard.info}
 \social[linkedin]{maxime-pinard}
 \social[github]{pinam45}
@@ -205,8 +210,7 @@
 % extra info
 %}
 %\photo[70pt]{MPinard.jpg}
-%\quote{Objectif: Intégrer une équipe au sein d'un projet novateur en tant que développeur informatique.}
-%\quote{Passionné d'informatique et de jeux vidéo, je me forme pour travailler sur des projets a la rencontre de mes deux passions.}
+\quote{3rd year student in a program leading to an computer science engineer degree, I am looking for a 6 month internship in development for September 2017}
 
 
 %----------------------------------------------------------------------------------------
@@ -215,7 +219,7 @@
 
 \begin{document}
 	\maketitle
-	\vspace*{-14mm}
+	\vspace*{-10mm}
 
 %-------------------------------------------
 %   Course
@@ -227,6 +231,15 @@
     {Currently in 3rd year}
 		\tlcventry{2014}{2016}{DEUTEC}{University of Technology of Belfort Montbéliard}{Sèvenans, France}{\textit{2 years}}{Preparatory classes before the specialization}
 		\tlcventry{2011}{2014}{Baccalauréat with major in maths, \textit{with honours}}{Lycée Louis Aragon (high school)}{Héricourt, France}{}{}
+
+%-------------------------------------------
+%   Languages
+%-------------------------------------------
+
+  \vspace*{\deletedSpace}
+  \section{Languages}
+    \cvdoubleitem{\bfseries French}{Native tongue}{\bfseries English}{B2 {\footnotesize (BULATS 68)}, Professional working level}
+    \cvdoubleitem{\bfseries Spanish}{Moderate level}{\bfseries Japanese}{Basic level}
 
 %-------------------------------------------
 %   Computer skills
@@ -255,23 +268,16 @@
     \cvlistitem{Multi-user file storage server in C++ with SFML}
 
 %-------------------------------------------
-%   Languages
-%-------------------------------------------
-
-  \vspace*{\deletedSpace}
-	\section{Languages}
-		\cvdoubleitem{\bfseries French}{\cvskill{}{5} Native tongue}{\bfseries Spanish}{\cvskill{}{3} B1, Moderate level}
-		\cvdoubleitem{\bfseries English}{\cvskill{}{4} B2 {\footnotesize (BULATS 68)}, Professional working level}{\bfseries Japanese}{\cvskill{}{2} A2, Basic level}
-
-%-------------------------------------------
 %   Work experience
 %-------------------------------------------
 
   \vspace*{\deletedSpace}
 	\section{Work experience}
-		\tllabelcventry{2016/2}{2016/2}{Feb. 2016}{Animator}{JAB France}{Evolène, Switzerland}{Camp of 40 young people, team of 15 animators}{}
-		\tllabelcventry{2015/2}{2015/3}{Jan.--Feb. 2015}{Animator}{JAB France}{Contamines, France}{Camp of 50 young people, team of 20 animators}{}
-		\tllabelcventry{2015/1}{2015/2}{Jan.--Feb. 2015}{Intern}{Souchier SAS}{Héricourt, France}{Installation of gaskets and assembly of smoke evacuation systems}{}
+		\tllabelcventry{2016/2}{2016/2}{Feb. 2016}{Animator}{JAB France, 1 week}{Evolène, Switzerland}{Camp of 40 young people, team of 15 animators}{}
+    \vspace*{-1.9mm}
+		\tllabelcventry{2015/2}{2015/3}{Jan.--Feb. 2015}{Animator}{JAB France, 1 week}{Contamines, France}{Camp of 50 young people, team of 20 animators}{}
+    \vspace*{-1.9mm}
+		\tllabelcventry{2015/1}{2015/2}{Jan.--Feb. 2015}{Intern}{Souchier SAS, 4 weeks}{Héricourt, France}{Installation of gaskets and assembly of smoke evacuation systems}{}
 
 %-------------------------------------------
 %   Others qualifications
@@ -289,7 +295,7 @@
   \vspace*{\deletedSpace}
 	\section{Interests}
 		\cvline{Computer science}{New programming paradigms, procedural generation, artificial intelligence, cryptography\ldots, their implementation, and the evolution of quantum computing.}
-		\cvline{Science}{Mathematics, theoretical physics, quantum physics\ldots}
-		\cvline{Sport}{Skiing, cycling, walking\ldots}
+		\cvline{Science}{Mathematics, physical system simulation, quantum physics\ldots}
+		\cvline{Sport}{Skiing and winter sports, cycling (mountain biking in a club for 3 years), mountain hiking}
 
 \end{document}
