@@ -15,7 +15,7 @@ RM                = rm -f
 
 #=============================================================================
 # Other
-TO_DELETE_EXT     = .aux .fdb_latexmk .fls .log .out .gz .pdf .html
+TO_DELETE_EXT     = .aux .fdb_latexmk .fls .log .out .synctex.gz .pdf .html
 
 #=============================================================================
 # Automatic variables
