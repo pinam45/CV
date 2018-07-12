@@ -2,23 +2,23 @@
 %   SETTINGS
 %----------------------------------------------------------------------------------------
 
-%-------------------------------------------
-%   Packages internal commands redefinitions
-%-------------------------------------------
-
-%--> adding preinfo
-
 %\makeatletter % changes the catcode of @ to 11
 %modify here packages internal commands
 %\makeatother % changes the catcode of @ back to 12
 
 \makeatletter
+
+%-------------------------------------------
+%   Add preinfo to header
+%-------------------------------------------
+
 \newcommand*{\preinfo}[1]{\def\@preinfo{#1}}
 
 % optional maketitle width to force a certain width (if set to 0pt, the width is calculated automatically)
 \newlength{\makecvtitlenamewidth}
 \setlength{\makecvtitlenamewidth}{0pt}% dummy value
 \renewcommand*{\makecvtitle}{%
+	{\hypersetup{urlcolor=color2}
 	% recompute lengths (in case we are switching from letter to resume, or vice versa)
 	\recomputecvlengths%
 	% optional detailed information (pre-rendering)
@@ -79,7 +79,42 @@
 		{}%
 		{{\centering\begin{minipage}{\quotewidth}\vspace*{\quoteDeletedSpace}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
 	\par% to avoid weird spacing bug at the first section if no blank line is left after \makecvtitle
+	}
 }
+
+%-------------------------------------------
+%   Change tllabelcventry label position
+%-------------------------------------------
+
+\renewcommand{\tllabelcventry}[9][color1]{%
+\tl@formatendyear{#3}
+\tl@formatstartyear{#2}
+ \cventry{\tikz[baseline=0pt]{
+     \fill [\tl@runningcolor] (0,0)
+        rectangle (\hintscolumnwidth,\tl@runningwidth);
+     \useasboundingbox (0,-1.5ex)
+        rectangle (\hintscolumnwidth,1ex);
+     \fill [#1] (0,0)
+        ++(\tl@startfraction*\hintscolumnwidth,0pt)
+        node [tl@singleyear,anchor=north] {#4}
+        rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width-1pt) ;
+    \ifissince
+       \newdimen\fullcolorwidth
+       \pgfmathsetlength\fullcolorwidth{\tl@startfraction*(1+(1-\tl@startfraction)*\tl@nsfrac)*\hintscolumnwidth}
+       \shade [left color=#1,right color=#1]
+(\tl@startfraction*\hintscolumnwidth,0)
+           rectangle (\fullcolorwidth,\tl@width);
+       \shade [left color=#1] (\fullcolorwidth,0)
+           rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+     \else
+        \fill [#1] (\tl@startfraction*\hintscolumnwidth,0)
+            rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+     \fi
+     }
+}
+{#5}{#6}{#7}{#8}{#9}%
+}
+
 \makeatother
 
 %-------------------------------------------
@@ -117,6 +152,25 @@
 }
 
 %-------------------------------------------
+%   hyperref colors
+%-------------------------------------------
+
+\AtBeginDocument{%
+
+\hypersetup{
+	colorlinks=true,
+	%linkcolor=red,
+	%anchorcolor=black,
+	citecolor=green,
+	%filecolor=cyan,
+	%menucolor=red,
+	urlcolor=color1,
+	linktoc=all
+}
+
+}
+
+%-------------------------------------------
 %   Symbols from FontAwesome
 %-------------------------------------------
 
@@ -145,14 +199,18 @@
 	\space{\ifnumgreater{\x}{#2}{\color{color1!30}}{\color{color1}}\faCircle}}%
 }
 
+\newcommand{\cvitemcom}[2]{%
+	\cvitemwithcomment{}{\listitemsymbol #1}{#2}%
+}
+
 % Colored href
 \newcommand{\Chref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
 
 % Space to delete between the sections
-\newcommand{\deletedSpace}{-2.5mm}
+\newcommand{\deletedSpace}{0mm}
 
 % Space to delete before the quote
-\newcommand{\quoteDeletedSpace}{-5mm}
+\newcommand{\quoteDeletedSpace}{0mm}
 
 %-------------------------------------------
 %   Age computation

@@ -2,12 +2,18 @@
 \input{packages}
 \input{settings}
 
+% Space to delete between the sections
+\renewcommand{\deletedSpace}{-2.5mm}
+
+% Space to delete before the quote
+\renewcommand{\quoteDeletedSpace}{-5mm}
+
 %----------------------------------------------------------------------------------------
 %   PERSONAL DATA
 %----------------------------------------------------------------------------------------
 
 \preinfo{%
-	\faUser\ \myage{} ans, célibataire
+	%\faUser\ \myage{} ans, célibataire
 }
 \firstname{Maxime}
 \familyname{Pinard}
@@ -23,7 +29,7 @@
 %\extrainfo{%
 % extra info
 %}
-\photo[70pt]{MPinard.jpg}
+%\photo[70pt]{MPinard.jpg}
 \quote{Élève-ingénieur en informatique actuellement en 1ère année, je cherche un stage {\normalsize(BAC+4)} de développement de 6 mois pour septembre 2017}
 
 
@@ -40,10 +46,10 @@
 	%-------------------------------------------
 
 	\section{Cursus}
-		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{Université de Technologie de Belfort-Montbéliard}{Belfort, France}{\textit{Bac+5 (eq. Master degree)}}
+		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{Université de Technologie de Belfort-Montbéliard}{Belfort, France}{eq. Master degree}
 		%{{\fontsize{12}{0}\textcolor{color1}{$\filledmedtriangleright$}} Actuellement en 3ème année, \textit{Bac+3 (eq. Bachelor degree)}}
-		{Actuellement en 3ème année, \textit{Bac+3 (eq. Bachelor degree)}}
-		\tlcventry{2014}{2016}{DEUTEC}{Université de Technologie de Belfort-Montbéliard}{Sèvenans, France}{\textit{Bac+2}}{Classe préparatoire avant choix de la filière diplômante}
+		{Actuellement en 2ème année}
+		\tlcventry{2014}{2016}{DEUTEC}{Université de Technologie de Belfort-Montbéliard}{Sèvenans, France}{}{Classe préparatoire avant choix de la filière diplômante, eq. Bachelor degree}
 		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt, France}{\small\textit{Mention Bien (eq. DEC)}}{}
 
 	%-------------------------------------------
@@ -64,7 +70,7 @@
 		\cvline{Langages}{C++, C, Java 8 (SE et EE), C\#, \LaTeX, SARL, Bash, CUDA, SQL, HTML/CSS, Assembleur, VBA\ldots}
 		\cvline{Outils}{UML, git, Maven, CMake, Make}
 		\cvitem{Administration système}{GNU/Linux (Debian 8), serveur personnel pour hébergement web Java EE (Tomcat 8)}
-		\cvline{Bibliothèques}{Capstone, Keystone, Qt, SFML, ImGui, JavaFx, JUnit4}
+		\cvline{Bibliothèques}{OpenGL, Capstone, Keystone, Qt, GTest, SFML, ImGui, GLFW, GLM, Inja, Json, JavaFx, JUnit4}
 		\cvline{IDE}{Visual Studio, JetBrains IntelliJ IDEA et CLion, Eclipse}
 		\cvline{Logiciels}{MathLab, Unity (+ package Vuforia AR et SteamVR pour HTC Vive)}
 
@@ -76,7 +82,6 @@
 	\section{Projets}
 		\cvlistitem{Captation des mouvements d'une personne et transmission réseau vers un avatar en réalité augmentée avec Unity (scripting en C\#), Kinect et Vuforia}
 		\cvitemwithcomment{}{\listitemsymbol Simulateur de gestion de métros en Java avec JavaFx (clone de MiniMetro)}{\Chref[color1]{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
-		\cvitemwithcomment{}{\listitemsymbol Jeu de la vie de Conway en SARL (langage orienté agents)}{\Chref[color1]{https://github.com/TiWinDeTea/sarl-game-of-life}{sarl game of life}}
 		\cvitemwithcomment{}{\listitemsymbol Dungeon crawler en Java avec JavaFx}{\Chref[color1]{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul the Game}}
 		\cvitemwithcomment{}{\listitemsymbol Snake like multijoueur (réseau local) en C++ avec SFML}{\Chref[color1]{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
 		\cvlistitem{Serveur de stockage de fichiers multi-utilisateurs en C++ avec SFML}
@@ -88,9 +93,7 @@
 	\vspace*{\deletedSpace}
 	\section{Expériences Professionnelles}
 		\tllabelcventry{2016/2}{2016/2}{Févr 2016}{Animateur}{JAB France, 1 semaine}{Evolène, Suisse}{Camp de ski de 40 jeunes, équipe de 15 animateurs}{}
-		\vspace*{-1.8mm}
 		\tllabelcventry{2015/2}{2015/3}{Janv--Févr 2015}{Animateur}{JAB France, 1 semaine}{Contamines, France}{Camp de ski de 50 jeunes, équipe de 20 animateurs}{}
-		\vspace*{-1.8mm}
 		\tllabelcventry{2015/1}{2015/2}{Janv--Févr 2015}{Stagiaire}{Souchier SAS, 4 semaines}{Héricourt, France}{Jointage et montage d'appareils de désenfumage}{}
 
 	%-------------------------------------------
