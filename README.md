@@ -11,7 +11,7 @@ Each versions can be compiled in PDF and HTML, the HTMLs are accessible from my 
 
 ## Requirements
 
-- A LaTex distribution such as [TeX Live](http://tug.org/texlive)
+- A LaTeX distribution such as [TeX Live](http://tug.org/texlive)
 - [FontAwesome](http://fontawesome.io/) installed on your system
 - [LuaTex](http://www.luatex.org/) or XeTeX to generate the PDFs
 - [pdf2htmlex](https://github.com/coolwanglu/pdf2htmlEX) to generate the HTMLs from the PDFs
