@@ -1,12 +1,13 @@
+\PassOptionsToPackage{citecolor=green}{hyperref}
 \documentclass[10pt,a4paper,sans]{moderncv}
 \input{packages}
 \input{settings}
 
 % Space to delete between the sections
-\renewcommand{\deletedSpace}{-2.5mm}
+%\renewcommand{\deletedSpace}{0mm}
 
 % Space to delete before the quote
-\renewcommand{\quoteDeletedSpace}{-5mm}
+%\renewcommand{\quoteDeletedSpace}{0mm}
 
 %----------------------------------------------------------------------------------------
 %   PERSONAL DATA
@@ -17,7 +18,7 @@
 }
 \firstname{Maxime}
 \familyname{Pinard}
-\title{Software developer intern}
+\title{Computer science student}
 \address{Héricourt, France}{}
 \phone[mobile]{+33~687~925~509}
 %\phone[fixed]{}
@@ -30,8 +31,7 @@
 % extra info
 %}
 %\photo[70pt]{MPinard.jpg}
-\quote{3rd year student in a program leading to a computer science engineer degree, I am looking for a 6 month internship in development for September 2017}
-
+\quote{Student in the final year of a computer science Master's degree program}
 
 %----------------------------------------------------------------------------------------
 %   DOCUMENT BODY
@@ -46,11 +46,30 @@
 	%-------------------------------------------
 
 	\section{Education and qualifications}
-		\tlcventry{2016}{0}{Computer science engineer diploma, imaging specialty}{University of Technology of Belfort Montbéliard}{Belfort, France}{\textit{5 years (eq. Master of Science)}}
-		%{{\fontsize{12}{0}\textcolor{color1}{$\filledmedtriangleright$}} Currently in 3rd year}
-		{Currently in 3rd year}
-		\tlcventry{2014}{2016}{DEUTEC}{University of Technology of Belfort Montbéliard}{Sèvenans, France}{\textit{2 years}}{Preparatory classes before the specialization}
-		\tlcventry{2011}{2014}{Baccalauréat with major in maths, \textit{with honours}}{Lycée Louis Aragon (high school)}{Héricourt, France}{}{}
+		\tlcventry{2018/9}{0}
+			{Master in computer science}
+			{Université du Québec à Chicoutimi}
+			{Chicoutimi}
+			{}
+			{\textit{Currently in 3rd year, for a double degree with UTBM}}
+		\tlcventry{2016}{0}
+			{Computer science engineer diploma, imaging specialty}
+			{Université de Technologie de Belfort-Montbéliard}
+			{Belfort, France}
+			{\textit{(eq. Master of Science)}}
+			{3rd year done at UQAC for a double degree}
+		\tlcventry{2014}{2016}
+			{DEUTEC}
+			{Université de Technologie de Belfort-Montbéliard}
+			{Sèvenans, France}
+			{}
+			{Preparatory classes before the specialization}
+		\tlcventry{2011}{2014}
+			{Baccalauréat with major in maths}
+			{Lycée Louis Aragon (high school)}
+			{Héricourt, France}
+			{\small\textit{with honours}}
+			{}
 
 	%-------------------------------------------
 	%   Languages
@@ -58,7 +77,7 @@
 
 	\vspace*{\deletedSpace}
 	\section{Languages}
-		\cvdoubleitem{\bfseries French}{Native tongue}{\bfseries English}{B2 {\footnotesize (BULATS 68)}, Professional working level}
+		\cvdoubleitem{\bfseries French}{Native language}{\bfseries English}{B2 {\footnotesize (BULATS 68)}, Professional working level}
 		\cvdoubleitem{\bfseries Spanish}{Moderate level}{\bfseries Japanese}{Basic level}
 
 	%-------------------------------------------
@@ -67,24 +86,12 @@
 
 	\vspace*{\deletedSpace}
 	\section{Computer skills}
-		\cvline{Languages}{C++, C, Java 8 (SE and EE), C\#, \LaTeX, SARL, Bash, CUDA, SQL, HTML/CSS, Assembly, VBA\ldots}
-		\cvline{Tools}{UML, git, Maven, CMake, Make}
+		\cvline{Langages}{C++, C, Java 8 (SE and EE), \LaTeX{}/Ti\textit{k}Z, C\#, Python, Bash, CUDA, SQL, HTML/CSS, Assembly, VBA\ldots}
+		\cvline{Tools}{UML, git, Maven, CMake, Make, Regex}
 		\cvitem{System administration}{GNU/Linux (Debian 8), personal server for Java EE web hosting (Tomcat 8)}
 		\cvline{Libraries}{OpenGL, Capstone, Keystone, Qt, GTest, SFML, ImGui, GLFW, GLM, Inja, Json, JavaFx, JUnit4}
 		\cvline{IDE}{Visual Studio, JetBrains IntelliJ IDEA and CLion, Eclipse}
-		\cvline{Softwares}{MathLab, Unity (+ package Vuforia AR and SteamVR for HTC Vive)}
-
-	%-------------------------------------------
-	%   Projects
-	%-------------------------------------------
-
-	\vspace*{\deletedSpace}
-	\section{Projets}
-		\cvlistitem{Capture of a person’s movement and transmission by network to an avatar in augmented reality with Unity (C\# scripting), Kinect and Vuforia}
-		\cvitemwithcomment{}{\listitemsymbol Subway management simulator in Java with JavaFx (MiniMetro clone)}{\Chref[color1]{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
-		\cvitemwithcomment{}{\listitemsymbol Dungeon crawler in Java with JavaFx}{\Chref[color1]{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul the Game}}
-		\cvitemwithcomment{}{\listitemsymbol Snake like multi-player (local network) in C++ with SFML}{\Chref[color1]{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
-		\cvlistitem{Multi-user file storage server in C++ with SFML}
+		%\cvline{Softwares}{MathLab, Unity (+ package Vuforia AR and SteamVR for HTC Vive)}
 
 	%-------------------------------------------
 	%   Work experience
@@ -92,9 +99,36 @@
 
 	\vspace*{\deletedSpace}
 	\section{Work experiences}
-		\tllabelcventry{2016/2}{2016/2}{Feb. 2016}{Activities supervisor}{JAB France, 1 week}{Evolène, Switzerland}{Camp of 40 young people, team of 15 supervisor}{}
-		\tllabelcventry{2015/2}{2015/3}{Jan.--Feb. 2015}{Activities supervisor}{JAB France, 1 week}{Contamines, France}{Camp of 50 young people, team of 20 supervisor}{}
-		\tllabelcventry{2015/1}{2015/2}{Jan.--Feb. 2015}{Intern}{Souchier SAS, 4 weeks}{Héricourt, France}{Installation of gaskets and assembly of smoke evacuation systems}{}
+		\tllabelcventry{2018/7}{2018/8}{07/2018 - 08/2018}
+			{Ambulance technician}
+			{Ambulances Phoenix, 2 months}
+			{Héricourt, France}
+			{Patient care and transportation}
+			{}
+		\tllabelcventry{2017/8}{2018/1}{08/2017 - 01/2018}
+			{Intern}
+			{Direction Générale de l'Armement Maîtrise de l'Information, 6 months}
+			{Bruz, France}
+			{Development and testing of an internal disassembly module}
+			{}
+		\tllabelcventry{2016/2}{2016/2}{02/2016}
+			{Activities supervisor}
+			{JAB France, 1 week}
+			{Evolène, Switzerland}
+			{Camp of 40 young people, team of 15 supervisor}
+			{}
+		\tllabelcventry{2015/2}{2015/2}{02/2015}
+			{Activities supervisor}
+			{JAB France, 1 week}
+			{Contamines, France}
+			{Camp of 50 young people, team of 20 supervisor}
+			{}
+		\tllabelcventry{2015/1}{2015/2}{01/2015}
+			{Intern}
+			{Souchier SAS, 4 weeks}
+			{Héricourt, France}
+			{Installation of gaskets and assembly of smoke evacuation systems}
+			{}
 
 	%-------------------------------------------
 	%   Others qualifications
@@ -102,8 +136,60 @@
 
 	\vspace*{\deletedSpace}
 	\section{Others qualifications}
-		%\cvlistitem{French driving license}{}
+		\cvlistitem{French driving license}{}
 		\cvlistitem{PSC1, \textit{French first aid certification}}{}
+
+	%-------------------------------------------
+	\newpage
+	%-------------------------------------------
+
+	%-------------------------------------------
+	%   Projects
+	%-------------------------------------------
+
+	\vspace*{\deletedSpace}
+	\section{Projets}
+		\subsection{Personal}
+			\cvitemcom{Number base converter, example ImGui/SFML [C++, ImGui, SFML]}
+				{\href{https://github.com/pinam45/BaseConverter}{BaseConverter}}
+			\cvitemcom{Console graphical library for Windows and Unix based systems [C]}
+				{\href{https://github.com/pinam45/ConsoleControl}{ConsoleControl}}
+			\cvitemcom{Dungeon crawler with procedural levels generation [Java, JavaFx]}
+				{\href{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul-the-Game}}
+			\cvitemcom{\LaTeX{}/Ti\textit{k}Z implementation of the UTBM internship report covers}
+				{\href{https://github.com/pinam45/utbm-latex-internship-report-covers}{utbm-latex-internship-report-covers}}
+			\cvitemcom{\LaTeX{}/Ti\textit{k}Z Beamer implementation of the UTBM presentation theme}
+				{\href{https://github.com/pinam45/utbm-beamer-theme}{utbm-beamer-theme}}
+		\subsection{Internship}
+			\cvitemcom{Hex-Rays IDA collaborative reverse-engineering plugin [C++, GTest, IDA]}
+				{\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA}{Internship report (fr)}}
+			\cvitemcom{Assembly / disassembly module for MIPS processors assembly code [C, Capstone, Keystone]}
+				{\href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA}{Internship report (fr)}}
+		\subsection{School}
+			\cvitemcom{Construction and render of a 3D parametric object with OpenGL [C++, GLFW, ImGui]}
+				{\href{https://github.com/pinam45/UTBM\_IN55\_ParametricObjectsConstruction}{ParametricObjectsConstruction}}
+			\cvitemcom{Hyperplanes calculator in dimension 4 finite geometries, (performance oriented) [C++]}
+				{\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
+			\cvitem{}{~~~> \textit{publication \cite{veldkamp}}}
+			\cvitemcom{MiniMetro clone: subway management simulator [Java, JavaFx]}
+				{\href{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
+			\cvitemcom{Pogo game with MinMax/AlphaBeta AI [C++, ConsoleControl]}
+				{\href{https://github.com/pinam45/UTBM_IA41_Pogo}{Pogo}}
+			\cvitemcom{Multiplayer Snake like game (local network) [C++, SFML]}
+				{\href{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
+			\cvlistitem{Multi-users file storage server [C++, SFML]}
+
+	%-------------------------------------------
+	%   Publications
+	%-------------------------------------------
+
+	\vspace*{\deletedSpace}
+	\begin{thebibliography}{}
+		%\itemsep=-2pt
+		\bibitem{veldkamp}
+		[1] \href{https://arxiv.org/abs/1806.08965}{Veldkamp Spaces of Low-Dimensional Ternary Segre Varieties}, [[not yet published]] (2018)\\
+		\textit{Metod Saniga, Jérôme Boulmier, Maxime Pinard, Frédéric Holweck}
+	\end{thebibliography}
 
 	%-------------------------------------------
 	%   Interests
