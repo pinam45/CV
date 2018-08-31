@@ -3,10 +3,10 @@
 \input{settings}
 
 % Space to delete between the sections
-\renewcommand{\deletedSpace}{-2.5mm}
+%\renewcommand{\deletedSpace}{0mm}
 
 % Space to delete before the quote
-\renewcommand{\quoteDeletedSpace}{-5mm}
+%\renewcommand{\quoteDeletedSpace}{0mm}
 
 %----------------------------------------------------------------------------------------
 %   PERSONAL DATA
@@ -17,7 +17,7 @@
 }
 \firstname{Maxime}
 \familyname{Pinard}
-\title{Stagiaire développement logiciel}
+\title{Étudiant en informatique}
 \address{Héricourt, France}{}
 \phone[mobile]{+33~687~925~509}
 %\phone[fixed]{}
@@ -30,7 +30,7 @@
 % extra info
 %}
 %\photo[70pt]{MPinard.jpg}
-\quote{Élève-ingénieur en informatique actuellement en 1ère année, je cherche un stage {\normalsize(BAC+4)} de développement de 6 mois pour septembre 2017}
+\quote{Élève-ingénieur en informatique, actuellement en 5ème année}
 
 
 %----------------------------------------------------------------------------------------
@@ -39,18 +39,36 @@
 
 \begin{document}
 	\maketitle
-	\vspace*{-15mm}
 
 	%-------------------------------------------
 	%   Course
 	%-------------------------------------------
 
 	\section{Cursus}
-		\tlcventry{2016}{0}{Diplôme d'ingénieur informatique, spécialité imagerie}{Université de Technologie de Belfort-Montbéliard}{Belfort, France}{eq. Master degree}
-		%{{\fontsize{12}{0}\textcolor{color1}{$\filledmedtriangleright$}} Actuellement en 3ème année, \textit{Bac+3 (eq. Bachelor degree)}}
-		{Actuellement en 2ème année}
-		\tlcventry{2014}{2016}{DEUTEC}{Université de Technologie de Belfort-Montbéliard}{Sèvenans, France}{}{Classe préparatoire avant choix de la filière diplômante, eq. Bachelor degree}
-		\tlcventry{2011}{2014}{Baccalauréat S, option SVT, spécialité Mathématiques}{Lycée Louis Aragon}{Héricourt, France}{\small\textit{Mention Bien (eq. DEC)}}{}
+		\tlcventry{2018/9}{0}
+			{Maîtrise en informatique}
+			{Université du Québec à Chicoutimi}
+			{Saguenay}
+			{\textit{Bac+5}}
+			{\textit{Actuellement en dernière année, en double diplôme avec l'UTBM}}
+		\tlcventry{2016/9}{0}
+			{Diplôme d'ingénieur en informatique, spécialité imagerie}
+			{Université de Technologie de Belfort-Montbéliard}
+			{Belfort, France}
+			{\textit{eq. Maîtrise}}
+			{\textit{Dernière année réalisée en double diplôme à l'UQAC}}
+		\tlcventry{2014/9}{2016/8}
+			{DEUTEC}
+			{Université de Technologie de Belfort-Montbéliard}
+			{Sèvenans, France}
+			{\textit{eq. Baccalauréat}}
+			{Classe préparatoire avant choix de la filière diplômante}
+		\tlcventry{2011/9}{2014/8}
+			{Baccalauréat S, option SVT, spécialité Mathématiques}
+			{Lycée Louis Aragon}
+			{Héricourt, France}
+			{\textit{Mention Bien, eq. DEC}}
+			{}
 
 	%-------------------------------------------
 	%   Languages
@@ -67,24 +85,12 @@
 
 	\vspace*{\deletedSpace}
 	\section{Compétences informatiques}
-		\cvline{Langages}{C++, C, Java 8 (SE et EE), C\#, \LaTeX, SARL, Bash, CUDA, SQL, HTML/CSS, Assembleur, VBA\ldots}
-		\cvline{Outils}{UML, git, Maven, CMake, Make}
-		\cvitem{Administration système}{GNU/Linux (Debian 8), serveur personnel pour hébergement web Java EE (Tomcat 8)}
+		\cvline{Langages}{C++, C, Java 8 (SE et EE), \LaTeX{}/Ti\textit{k}Z, C\#, Python, Bash, CUDA, SQL, HTML/CSS, Assembleur, VBA\ldots}
+		\cvline{Outils}{UML, git, Maven, CMake, Make, Regex}
+		\cvitem{Administration système}{GNU/Linux (Debian 8), hébergement de sites web Java EE et de services web Docker}
 		\cvline{Bibliothèques}{OpenGL, Capstone, Keystone, Qt, GTest, SFML, ImGui, GLFW, GLM, Inja, Json, JavaFx, JUnit4}
 		\cvline{IDE}{Visual Studio, JetBrains IntelliJ IDEA et CLion, Eclipse}
-		\cvline{Logiciels}{MathLab, Unity (+ package Vuforia AR et SteamVR pour HTC Vive)}
-
-	%-------------------------------------------
-	%   Projects
-	%-------------------------------------------
-
-	\vspace*{\deletedSpace}
-	\section{Projets}
-		\cvlistitem{Captation des mouvements d'une personne et transmission réseau vers un avatar en réalité augmentée avec Unity (scripting en C\#), Kinect et Vuforia}
-		\cvitemwithcomment{}{\listitemsymbol Simulateur de gestion de métros en Java avec JavaFx (clone de MiniMetro)}{\Chref[color1]{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
-		\cvitemwithcomment{}{\listitemsymbol Dungeon crawler en Java avec JavaFx}{\Chref[color1]{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul the Game}}
-		\cvitemwithcomment{}{\listitemsymbol Snake like multijoueur (réseau local) en C++ avec SFML}{\Chref[color1]{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
-		\cvlistitem{Serveur de stockage de fichiers multi-utilisateurs en C++ avec SFML}
+		%\cvline{Logiciels}{MathLab, Unity (+ package Vuforia AR et SteamVR pour HTC Vive)}
 
 	%-------------------------------------------
 	%   Work experience
@@ -92,9 +98,36 @@
 
 	\vspace*{\deletedSpace}
 	\section{Expériences Professionnelles}
-		\tllabelcventry{2016/2}{2016/2}{Févr 2016}{Animateur}{JAB France, 1 semaine}{Evolène, Suisse}{Camp de ski de 40 jeunes, équipe de 15 animateurs}{}
-		\tllabelcventry{2015/2}{2015/3}{Janv--Févr 2015}{Animateur}{JAB France, 1 semaine}{Contamines, France}{Camp de ski de 50 jeunes, équipe de 20 animateurs}{}
-		\tllabelcventry{2015/1}{2015/2}{Janv--Févr 2015}{Stagiaire}{Souchier SAS, 4 semaines}{Héricourt, France}{Jointage et montage d'appareils de désenfumage}{}
+		\tllabelcventry{2018/7}{2018/8}{07/2018 - 08/2018}
+			{Auxiliaire ambulancier}
+			{Ambulances Phoenix, 2 mois}
+			{Héricourt, France}
+			{Prise en charge et transport de patients}
+			{}
+		\tllabelcventry{2017/8}{2018/1}{08/2017 - 01/2018}
+			{Stagiaire}
+			{Direction Générale de l'Armement Maîtrise de l'Information, 6 mois}
+			{Bruz, France}
+			{Développement et fiabilisation d'un module de désassemblage interne}
+			{}
+		\tllabelcventry{2016/2}{2016/2}{02/2016}
+			{Animateur}
+			{JAB France, 1 semaine}
+			{Evolène, Suisse}
+			{Camp de ski de 40 jeunes, équipe de 15 animateurs}
+			{}
+		\tllabelcventry{2015/2}{2015/2}{02/2015}
+			{Animateur}
+			{JAB France, 1 semaine}
+			{Contamines, France}
+			{Camp de ski de 50 jeunes, équipe de 20 animateurs}
+			{}
+		\tllabelcventry{2015/1}{2015/2}{01/2015}
+			{Stagiaire}
+			{Souchier SAS, 4 semaines}
+			{Héricourt, France}
+			{Jointage et montage d'appareils de désenfumage}
+			{}
 
 	%-------------------------------------------
 	%   Others qualifications
@@ -102,8 +135,60 @@
 
 	\vspace*{\deletedSpace}
 	\section{Certifications autres}
-		\cvlistitem{Permis de conduire français}{}
+		\cvlistitem{Permis de conduire}{}
 		\cvlistitem{Prévention et Secours Civiques de niveau 1 (PSC1)}{}
+
+	%-------------------------------------------
+	\newpage
+	%-------------------------------------------
+
+	%-------------------------------------------
+	%   Projects
+	%-------------------------------------------
+
+	\vspace*{\deletedSpace}
+	\section{Projets}
+		\subsection{Personnels}
+			\cvitemcom{Convertisseur de base, exemple ImGui/SFML [C++, ImGui, SFML]}
+				{\href{https://github.com/pinam45/BaseConverter}{BaseConverter}}
+			\cvitemcom{Librairie graphique en console pour systèmes basé Unix et Windows [C]}
+				{\href{https://github.com/pinam45/ConsoleControl}{ConsoleControl}}
+			\cvitemcom{Dungeon crawler avec niveaux à génération procédurale [Java, JavaFx]}
+				{\href{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul-the-Game}}
+			\cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z des 1er et 4e de couverture pour rapports de stage UTBM}
+				{\href{https://github.com/pinam45/utbm-latex-internship-report-covers}{utbm-latex-internship-report-covers}}
+			\cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z Beamer du theme pour présentations UTBM}
+				{\href{https://github.com/pinam45/utbm-beamer-theme}{utbm-beamer-theme}}
+		\subsection{Stage}
+			\cvitemcom{Plugin Hex-Rays IDA de reverse-engineering collaboratif [C++, GTest, IDA]}
+				{\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA}{Rapport de stage}}
+			\cvitemcom{Module d'assemblage/désassemblage pour code assembleur MIPS [C, Capstone, Keystone]}
+				{\href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA}{Rapport de stage}}
+		\subsection{École}
+			\cvitemcom{Construction et rendu d'objet paramétrique avec OpenGL [C++, GLFW, ImGui]}
+				{\href{https://github.com/pinam45/UTBM\_IN55\_ParametricObjectsConstruction}{ParametricObjectsConstruction}}
+			\cvitemcom{Calculateur d'hyperplans dans des géométries finies de dimension 4 (orienté performances) [C++]}
+				{\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
+			\cvitem{}{~~~> \textit{publication \cite{veldkamp}}}
+			\cvitemcom{Clone de MiniMetro: simulateur de gestion de métros [Java, JavaFx]}
+				{\href{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
+			\cvitemcom{Jeux de Pogo avec IA MinMax/AlphaBeta [C++, ConsoleControl]}
+				{\href{https://github.com/pinam45/UTBM_IA41_Pogo}{Pogo}}
+			\cvitemcom{Jeu type Snake multijoueur (réseau local) [C++, SFML]}
+				{\href{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
+			\cvlistitem{Serveur de stockage de fichiers multi-utilisateurs [C++, SFML]}
+
+	%-------------------------------------------
+	%   Publications
+	%-------------------------------------------
+
+	\vspace*{\deletedSpace}
+	\begin{thebibliography}{}
+		%\itemsep=-2pt
+		\bibitem{veldkamp}
+		[1] \href{https://arxiv.org/abs/1806.08965}{Veldkamp Spaces of Low-Dimensional Ternary Segre Varieties}, [[publication à venir]] (2018)\\
+		\textit{Metod Saniga, Jérôme Boulmier, Maxime Pinard, Frédéric Holweck}
+	\end{thebibliography}
 
 	%-------------------------------------------
 	%   Interests
@@ -111,8 +196,10 @@
 
 	\vspace*{\deletedSpace}
 	\section{Centres d'intérêts}
-		\cvline{L'informatique}{Les nouveaux paradigmes de programmation, la génération procédurale, l'intelligence artificielle, la cryptographie\ldots{}, leur mise en pratique, et l'évolution de l'informatique quantique.}
-		\cvline{Les sciences}{Les mathématiques, simulation de système physique, physique quantique\ldots}
-		\cvline{Le sport}{Le ski et les sports d'hivers, le vélo (VTT en club pendant 3 ans), la marche en montagne}
-
+		\cvline{L'informatique}
+			{Les nouveaux paradigmes de programmation, la génération procédurale, l'intelligence artificielle, la cryptographie\ldots{}, leur mise en pratique, et l'évolution de l'informatique quantique.}
+		\cvline{Les sciences}
+			{Les mathématiques, simulation de système physique, physique quantique\ldots}
+		\cvline{Le sport}
+			{Le ski et les sports d'hivers, le vélo (VTT en club pendant 3 ans), la marche en montagne}
 \end{document}
