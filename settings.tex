@@ -14,6 +14,9 @@
 
 \newcommand*{\preinfo}[1]{\def\@preinfo{#1}}
 
+% as \quotewidth can't be changed, we define \quotecustomwidth
+\newlength{\quotecustomwidth}
+\setlength{\quotecustomwidth}{0.65\textwidth}% default value
 % optional maketitle width to force a certain width (if set to 0pt, the width is calculated automatically)
 \newlength{\makecvtitlenamewidth}
 \setlength{\makecvtitlenamewidth}{0pt}% dummy value
@@ -77,7 +80,7 @@
 	% optional quote
 	\ifthenelse{\isundefined{\@quote}}%
 		{}%
-		{{\centering\begin{minipage}{\quotewidth}\vspace*{\quoteDeletedSpace}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
+		{{\centering\begin{minipage}{\quotecustomwidth}\vspace*{\quoteDeletedSpace}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
 	\par% to avoid weird spacing bug at the first section if no blank line is left after \makecvtitle
 	}
 }
@@ -124,6 +127,23 @@
 % color0      main default color, normally left to black
 % color1      primary scheme color
 % color2      secondary scheme color
+
+%-------------------------------------------
+%   Lengths modifications
+%-------------------------------------------
+
+\AtBeginDocument{%
+
+\setlength{\quotecustomwidth}{0.85\textwidth}
+
+%\setlength{\quotewidth}{0.65\textwidth}
+%\setlength{\separatorcolumnwidth}{0.025\textwidth}
+%\setlength{\maincolumnwidth}{\textwidth}
+%\settowidth{\listitemsymbolwidth}{\listitemsymbol}
+%\sethintscolumnlength{<length>} % <length> is the desired length in a unit LaTeX understands
+%\sethintscolumntowidth{<string>} % where <string> is a string of the desired length (usually, the longest string that has to appear in the column)
+
+}
 
 %-------------------------------------------
 %   Theme font and style redefinition
