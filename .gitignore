@@ -1,14 +1,69 @@
-#pdfTex
+########################
+### Latex
+########################
+
+## Compilation output
+*.pdf
+
+## Core latex/pdflatex auxiliary files
 *.aux
-*.fdb_latexmk
-*.fls
+*.lof
 *.log
+*.lol
+*.lot
+*.fls
 *.out
-*.gz
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.sta
 
-#Sublime Text
-*.sublime-project
-*.sublime-workspace
+## Intermediate documents
+*.dvi
+*.xdv
+*-converted-to.*
 
-#Others
-*.directory
+## Bibliography auxiliary files (bibtex/biblatex/biber)
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+## makeidx
+*.alg
+*.idx
+*.ilg
+*.ind
+*.ist
+
+## beamer
+*.nav
+*.pre
+*.snm
+*.vrb
+
+## glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+## Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+########################
+### Temporary files
+########################
+
+.fuse_hidden*
