@@ -6,15 +6,15 @@ HTML_ZOOM               = 1.3
 
 #=============================================================================
 # Commands variables
-LATEX_COMPILER_CMD      = lualatex
-PDF_TO_HTML_CMD         = pdf2htmlEX
+LATEX_COMPILER_CMD      = latexmk -g -bibtex -lualatex -silent
+PDF_TO_HTML_CMD         = pdf2htmlEX --process-outline 0 --zoom $(HTML_ZOOM)
 DISPLAY                 = printf
 RM                      = rm -f
 
 #=============================================================================
 # Other
-TO_DELETE_EXT           = .aux .fdb_latexmk .fls .log .out .synctex.gz .pdf .html
-LATEX_COMPILER_SILENT   = -interaction=batchmode 1>/dev/null 2>/dev/null
+TO_DELETE_EXT           = .aux .bbl .bcf .blg .run.xml .fdb_latexmk .fls .log .out .synctex.gz .pdf .html
+LATEX_COMPILER_SILENT   = 1>/dev/null 2>/dev/null
 PDF_TO_HTML_CMD_SILENT  = 1>/dev/null 2>/dev/null
 
 #=============================================================================
@@ -34,7 +34,7 @@ endef
 
 define launch_pdf_to_html
 	@$(DISPLAY) "\033[0m\033[1;34m>\033[0m Executing $(PDF_TO_HTML_CMD)\n"
-	$(PDF_TO_HTML_CMD) --process-outline 0 --zoom $(HTML_ZOOM) $(1) $(if $(SILENT), $(PDF_TO_HTML_CMD_SILENT))
+	$(PDF_TO_HTML_CMD) $(1) $(if $(SILENT), $(PDF_TO_HTML_CMD_SILENT))
 
 endef
 
@@ -75,11 +75,10 @@ pdf: $(PDF_TARGETS)
 html: $(HTML_TARGETS)
 	@$(DISPLAY) "\n\n"
 
+
 %.pdf: %.tex FORCE
 	$(eval DOCUMENT_NAME:=$(patsubst %.pdf,%,$@))
 	@$(DISPLAY) "\nBuilding \033[0;33m$@\033[0m:\n"
-	$(call launch_latex_compiler, $(DOCUMENT_NAME))
-	$(call launch_latex_compiler, $(DOCUMENT_NAME))
 	$(call launch_latex_compiler, $(DOCUMENT_NAME))
 
 

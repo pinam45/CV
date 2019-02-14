@@ -1,4 +1,5 @@
 \documentclass[letterpaper,10pt,sans]{moderncv}
+\PassOptionsToPackage{language=french}{biblatex}
 \input{packages}
 \input{settings}
 
@@ -175,7 +176,7 @@
 		\subsection{Recherche}
 			\cvitemcom{Calculateur d'hyperplans dans des géométries finies de dimension 4 (orienté performances) [C++]}
 				{\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
-			\cvitem{}{~~~> \textit{publication \cite{veldkamp}}}
+			\cvitem{}{~~~> \textit{publication \cite{Boulmier2019}}}
 		\subsection{Stage}
 			\cvitemcom{Plugin Hex-Rays IDA de reverse-engineering collaboratif [C++, GTest, IDA]}
 				{\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA}{Rapport de stage}}
@@ -195,12 +196,7 @@
 	%-------------------------------------------
 
 	\vspace*{\deletedSpace}
-	\begin{thebibliography}{}
-		%\itemsep=-2pt
-		\bibitem{veldkamp}
-		[1] \href{https://arxiv.org/abs/1806.08965}{Veldkamp Spaces of Low-Dimensional Ternary Segre Varieties}, [[publication à venir]] (2018)\\
-		\textit{Metod Saniga, Jérôme Boulmier, Maxime Pinard, Frédéric Holweck}
-	\end{thebibliography}
+	\printbibliography[title=Publications]{}
 
 	%-------------------------------------------
 	%   Interests
