@@ -90,32 +90,69 @@
 %-------------------------------------------
 
 \renewcommand{\tllabelcventry}[9][color1]{%
-\tl@formatendyear{#3}
-\tl@formatstartyear{#2}
- \cventry{\tikz[baseline=0pt]{
-     \fill [\tl@runningcolor] (0,0)
-        rectangle (\hintscolumnwidth,\tl@runningwidth);
-     \useasboundingbox (0,-1.5ex)
-        rectangle (\hintscolumnwidth,1ex);
-     \fill [#1] (0,0)
-        ++(\tl@startfraction*\hintscolumnwidth,0pt)
-        node [tl@singleyear,anchor=north] {#4}
-        rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width-1pt) ;
-    \ifissince
-       \newdimen\fullcolorwidth
-       \pgfmathsetlength\fullcolorwidth{\tl@startfraction*(1+(1-\tl@startfraction)*\tl@nsfrac)*\hintscolumnwidth}
-       \shade [left color=#1,right color=#1]
-(\tl@startfraction*\hintscolumnwidth,0)
-           rectangle (\fullcolorwidth,\tl@width);
-       \shade [left color=#1] (\fullcolorwidth,0)
-           rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
-     \else
-        \fill [#1] (\tl@startfraction*\hintscolumnwidth,0)
-            rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
-     \fi
-     }
+	\tl@formatendyear{#3}
+	\tl@formatstartyear{#2}
+	\cventry{
+		\tikz[baseline=0pt]{
+			\fill [\tl@runningcolor] (0,0) rectangle (\hintscolumnwidth,\tl@runningwidth);
+			\useasboundingbox (0,-1.5ex)
+				rectangle (\hintscolumnwidth,1ex);
+			\fill [#1] (0,0)
+				++(\tl@startfraction*\hintscolumnwidth,0pt)
+				rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);
+			\node[#1,tl@singleyear,anchor=north] at (\tl@startfraction*\hintscolumnwidth/2+\tl@endfraction*\hintscolumnwidth/2,0pt) {#4};
+		}
+	}
+	{#5}{#6}{#7}{#8}{#9}%
 }
-{#5}{#6}{#7}{#8}{#9}%
+
+
+%-------------------------------------------
+%   Define tldoublelabelcventry
+%-------------------------------------------
+
+\pgfkeys{
+	/tldoublelabelcventry/.is family,
+	/tldoublelabelcventry,
+	default/.style={
+		starta = 0,
+		enda = 0,
+		startb = 0,
+		endb = 0,
+		label = label,
+	},
+	starta/.estore in = \tlstarta,
+	enda/.estore in = \tlenda,
+	startb/.estore in = \tlstartb,
+	endb/.estore in = \tlendb,
+	label/.estore in = \tllabel,
+}
+\newcommand{\tldoublelabelcventry}[7][color1]{%
+	\pgfkeys{/tldoublelabelcventry, default, #2}%
+	\tl@formatstartyear{\tlstarta}
+	\edef\tl@startfractiona{\tl@startfraction}
+	\tl@formatendyear{\tlenda}
+	\edef\tl@endfractiona{\tl@endfraction}
+	\tl@formatstartyear{\tlstartb}
+	\edef\tl@startfractionb{\tl@startfraction}
+	\tl@formatendyear{\tlendb}
+	\edef\tl@endfractionb{\tl@endfraction}
+	\cventry{
+		\tikz[baseline=0pt]{
+			\fill [\tl@runningcolor] (0,0) rectangle (\hintscolumnwidth,\tl@runningwidth);
+			\useasboundingbox (0,-1.5ex)
+				rectangle (\hintscolumnwidth,1ex);
+			\fill [#1] (0,0)
+				++(\tl@startfractiona*\hintscolumnwidth,0pt)
+				rectangle (\tl@endfractiona*\hintscolumnwidth,\tl@width);
+			\fill [#1] (0,0)
+				++(\tl@startfractionb*\hintscolumnwidth,0pt)
+				rectangle (\tl@endfractionb*\hintscolumnwidth,\tl@width);
+			\pgfmathsetmacro\pos{(\tl@startfractiona+\tl@startfractionb+\tl@endfractiona+\tl@endfractionb)/4*\hintscolumnwidth}
+			\node[#1,tl@singleyear,anchor=north] at (\pos pt,0pt) {\tllabel};
+		}
+	}
+	{#3}{#4}{#5}{#6}{#7}%
 }
 
 \makeatother
