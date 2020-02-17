@@ -2,7 +2,19 @@
 %   PACKAGES
 %----------------------------------------------------------------------------------------
 
-\usepackage[utf8]{inputenc}
+% Pro­gram­ming fa­cil­i­ties
+\usepackage{etoolbox}
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\ifboolexpr{bool{xetex} or bool{luatex}}{%
+	\usepackage{fontspec}
+}{%
+	\usepackage[utf8]{inputenc}
+}
+
 %\usepackage[scale=0.975]{geometry}
 \usepackage[top=0.85cm, bottom=0.85cm, left=0.85cm, right=0.85cm]{geometry}
 \recomputelengths{}
@@ -12,6 +24,7 @@
 \usepackage{datenumber,fp}
 \usepackage{fontawesome}
 \usepackage[bibstyle=ieee,citestyle=numeric-comp]{biblatex}
+\usepackage{relsize}
 %\usepackage{hyperref}
 %\usepackage{mnsymbol}
 %\usepackage{academicons}

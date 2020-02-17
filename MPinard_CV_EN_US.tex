@@ -1,10 +1,10 @@
-\documentclass[letterpaper,10pt,sans]{moderncv}
+\documentclass[a4paper,10pt,sans]{moderncv}
 \PassOptionsToPackage{language=english}{biblatex}
 \input{packages}
 \input{settings}
 
 % Space to delete between the sections
-\renewcommand{\deletedSpace}{-2mm}
+%\renewcommand{\deletedSpace}{0mm}
 
 % Space to delete before the quote
 %\renewcommand{\quoteDeletedSpace}{0mm}
@@ -18,7 +18,7 @@
 }
 \firstname{Maxime}
 \familyname{Pinard}
-\title{Computer science student}
+\title{\Cpp{} developer}
 \address{Héricourt, France}{}
 \phone[mobile]{+33~687~925~509}
 %\phone[fixed]{}
@@ -31,7 +31,7 @@
 % extra info
 %}
 %\photo[70pt]{MPinard.jpg}
-\quote{Student in the final year of a computer science Engineer and Master's degree program}
+\quote{Computer enthusiast, I recently graduated and am looking for a job as a \Cpp{} developer\\ for early April 2020}
 
 %----------------------------------------------------------------------------------------
 %   DOCUMENT BODY
@@ -41,33 +41,33 @@
 	\maketitle
 
 	%-------------------------------------------
-	%   Course
+	%   Education and qualifications
 	%-------------------------------------------
 
 	\section{Education and qualifications}
 		\tlcventry{2018/9}{2020/2}
-			{Master in computer science}
+			{Master in computer science (double degree with UTBM)}
 			{Université du Québec à Chicoutimi}
 			{Saguenay, Quebec, Canada}
 			{}
-			{\textit{Currently in 3rd year, for a double degree with UTBM}}
+			{}
 		\tlcventry{2016/9}{2020/2}
 			{Computer science engineer diploma, imaging specialty}
 			{Université de Technologie de Belfort-Montbéliard}
 			{Belfort, France}
 			{\textit{(eq. Master of Science)}}
-			{3rd year done at UQAC for a double degree}
+			{}
 		\tlcventry{2014/9}{2016/8}
 			{University degree in technology}
 			{Université de Technologie de Belfort-Montbéliard}
 			{Sèvenans, France}
 			{}
-			{Preparatory classes before the specialization}
+			{}
 		\tlcventry{2011/9}{2014/8}
 			{Baccalauréat with major in maths}
 			{Lycée Louis Aragon (high school)}
 			{Héricourt, France}
-			{\small\textit{with honours}}
+			{\textit{with honours}}
 			{}
 
 	%-------------------------------------------
@@ -76,7 +76,7 @@
 
 	\vspace*{\deletedSpace}
 	\section{Languages}
-		\cvdoubleitem{\bfseries French}{Native language}{\bfseries English}{B2 {\footnotesize (BULATS 68)}, Professional working level}
+		\cvdoubleitem{\bfseries French}{Native language}{\bfseries English}{Professional working level}
 		\cvdoubleitem{\bfseries Spanish}{Moderate level}{\bfseries Japanese}{Basic level}
 
 	%-------------------------------------------
@@ -85,49 +85,30 @@
 
 	\vspace*{\deletedSpace}
 	\section{Computer skills}
-		\cvline{Languages}{C++, C, Java, \LaTeX{}/Ti\textit{k}Z, Python, Bash, CUDA, SQL, HTML/CSS, Assembly, VBA\ldots}
-		\cvline{Methods/Tools}{Agile, Unit tests, Design patterns, UML, BPMN, git, CMake, Make, Maven, Regex}
+		\cvline{Languages}{\Cpp{}, C, Java, \LaTeX{}/Ti\textit{k}Z, Python, Bash, CUDA, SQL, HTML/CSS, Assembly, VBA\ldots}
+		\cvline{Methods/Tools}{Agile, Unit tests, Design patterns, UML, BPMN, git, CMake, Make, Clang Tools, Maven, Regex}
 		\cvline{Metaheuristics}{Tabu search, simulated annealing, genetic algorithms, ant colony optimization algorithms, PSO}
 		\cvline{Libraries}{boost, fmt, spdlog, OpenGL, OpenCV, OpenMP, MPI, GTest, Catch2, Capstone, Keystone, Json, SFML, ImGui, GLFW, GLM, libmpg123, TagLib, cxxopts, inja, JavaFx, JUnit4}
 		\cvitem{System administration}{GNU/Linux (Debian 8+), personal server for Java EE and Docker web services hosting}
 		\cvline{IDE}{Visual Studio 2017/2019, CLion, IntelliJ IDEA}
 
 	%-------------------------------------------
-	%   Publications
-	%-------------------------------------------
-
-	\vspace*{\deletedSpace}
-	\printbibliography[title=Publications]{}
-
-	%-------------------------------------------
-	%   Others qualifications
-	%-------------------------------------------
-
-	%\vspace*{\deletedSpace}
-	\section{Others qualifications}
-		\cvlistitem{French driving license}{}
-		\cvlistitem{PSC1, \textit{French first aid certification}}{}
-
-	%-------------------------------------------
-	\newpage
-	%-------------------------------------------
-
-	%-------------------------------------------
-	%   Work experience
+	%   Work experiences
 	%-------------------------------------------
 
 	\vspace*{\deletedSpace}
 	\section{Work experiences}
 		\tllabelcventry{2019/9}{2020/2}{09/2019 - 02/2020}
-			{Stagiaire}
+			{Research and software developement intern}
 			{Institut de Recherche en Informatique, Mathématiques, Automatique et Signal, 6 months\hspace{-25pt}}
 			{Mulhouse, France}
 			{}
 			{}
 			\vspace{-5pt}
 			\begin{itemize}
-				\item Development of memetic hybrid metaheuristics for the Set Cover Problem\\
-					and C++ high performance implementation
+				\item Development of memetic hybrid metaheuristics for the Set Cover Problem and \Cpp{} high performance\\
+					implementation
+				\item Benchmark on the HPC cluster of the Strasbourg méso-centre and submission to 2 conferences
 			\end{itemize}
 			\vspace{5pt}
 		% \tllabelcventry{2019/7}{2019/8}{07/2019 - 08/2019}
@@ -155,17 +136,17 @@
 			{Patient care and transportation}
 			{}
 		\tllabelcventry{2017/8}{2018/1}{08/2017 - 01/2018}
-			{Intern}
+			{Software developement intern}
 			{Direction Générale de l'Armement Maîtrise de l'Information, 6 months}
 			{Bruz, France}
 			{}
 			{}
 			\vspace{-5pt}
 			\begin{itemize}
-				\item Work on GenDbg, a multi languages / OS / architecture debugger:\\
+				\item Work on GenDbg, a multi languages, OS and architectures debugger:\\
 					\phantom{=}Development in C of a disassembly module for MIPS architectures and the associated unit tests
 				\item Work on YaCo, an IDA Pro plugin enabling collaborative reverse-engineering using Git:\\
-					\phantom{=}Ported to C++ and improved Git repository management and IDA events handling
+					\phantom{=}Ported to \Cpp{} and improved Git repository management and IDA events handling
 			\end{itemize}
 			\vspace{5pt}
 		\tllabelcventry{2016/2}{2016/2}{02/2016}
@@ -188,19 +169,32 @@
 			{}
 
 	%-------------------------------------------
+	\newpage
+	%-------------------------------------------
+
+	%-------------------------------------------
+	%   Others qualifications
+	%-------------------------------------------
+
+	%\vspace*{\deletedSpace}
+	\section{Others qualifications}
+		\cvlistitem{French driving license}{}
+		\cvlistitem{PSC1, \textit{French first aid certification}}{}
+
+	%-------------------------------------------
 	%   Projects
 	%-------------------------------------------
 
 	\vspace*{\deletedSpace}
 	\section{Projects}
 		\subsection{Personal}
-			\cvitemcom{Header-only dynamic bitset implementation and unit tests [C++, Catch2]}
+			\cvitemcom{Header-only dynamic bitset implementation and unit tests [\Cpp{}, Catch2]}
 				{\href{https://github.com/pinam45/dynamic_bitset}{dynamic\_bitset}}
-			\cvitemcom{Music player [C++, ImGui, SFML, spdlog, libmpg123]}
+			\cvitemcom{Music player [\Cpp{}, ImGui, SFML, spdlog, libmpg123]}
 				{\href{https://github.com/pinam45/MagicPlayer}{MagicPlayer}}
-			\cvitemcom{Utility functions to configure C/C++ projects (clang-format, ccache, sanitizers,\ldots) [CMake]}
+			\cvitemcom{Utility functions to configure C/\Cpp{} projects (clang-format, ccache, sanitizers,\ldots) [CMake]}
 				{\href{https://github.com/pinam45/CMutils}{CMutils}}
-			\cvitemcom{Number base converter, example ImGui/SFML [C++, ImGui, SFML]}
+			\cvitemcom{Number base converter, example ImGui/SFML [\Cpp{}, ImGui, SFML]}
 				{\href{https://github.com/pinam45/BaseConverter}{BaseConverter}}
 			\cvitemcom{Console graphical library for Windows and Unix based systems [C]}
 				{\href{https://github.com/pinam45/ConsoleControl}{ConsoleControl}}
@@ -210,28 +204,39 @@
 				{\href{https://github.com/pinam45/utbm-latex-internship-report-covers}{utbm-latex-internship-report-covers}}
 			\cvitemcom{\LaTeX{}/Ti\textit{k}Z Beamer implementation of the UTBM presentation theme}
 				{\href{https://github.com/pinam45/utbm-beamer-theme}{utbm-beamer-theme}}
-			\cvitemcom{Multiplayer Snake like game (local network) [C++, SFML]}
+			\cvitemcom{Multiplayer Snake like game (local network) [\Cpp{}, SFML]}
 				{\href{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
 		\subsection{Research}
-			\cvitemcom{Hyperplanes calculator in dimension 4 finite geometries, (performance oriented) [C++]}
+			\cvitemcom{Hyperplanes calculator in dimension 4 finite geometries, (performance oriented) [\Cpp{}]}
 				{\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
 			\cvitem{}{~~~> \textit{publication \cite{Boulmier2019}}}
 		\subsection{Internship}
-			\cvitemcom{Hex-Rays IDA collaborative reverse-engineering plugin [C++, GTest, IDA]}
+			\cvitemcom{Program for solving the Set Cover Problem [\Cpp{}, dynamic\_bitset, spglog, json, cxxopts]}
+				{\href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Internship report (fr)}}
+			\cvitemcom{Program for processing Set Cover Problem results [\Cpp{}, spglog, json, cxxopts, inja]}
+				{\href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Internship report (fr)}}
+			\cvitemcom{Hex-Rays IDA collaborative reverse-engineering plugin [\Cpp{}, GTest, IDA]}
 				{\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Internship report (fr)}}
 			\cvitemcom{Assembly / disassembly module for MIPS processors assembly code [C, Capstone, Keystone, GTest]}
 				{\href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Internship report (fr)}}
-		\subsection{School}
-			\cvitemcom{Algorithms for solving the Set Cover Problem [C++, spdlog, dynamic\_bitset]}
+		\subsection{Universities}
+			\cvitemcom{Algorithms for solving the Set Cover Problem [\Cpp{}, spdlog, dynamic\_bitset]}
 				{\href{https://github.com/pinam45/UQAC_8INF870_Set_cover_problem}{Set\_cover\_problem}}
 			\cvitem{}{~~~> Exhaustive search, Greedy, Branch and Bound, Simulated Annealing, Genetic and Memetic Algorithm}
-			\cvitemcom{Construction and render of a 3D parametric object with OpenGL [C++, GLFW, ImGui]}
+			\cvitemcom{Construction and render of a 3D parametric object with OpenGL [\Cpp{}, GLFW, ImGui]}
 				{\href{https://github.com/pinam45/UTBM\_IN55\_ParametricObjectsConstruction}{ParametricObjectsConstruction}}
 			\cvitemcom{MiniMetro clone: subway management simulator [Java, JavaFx]}
 				{\href{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
-			\cvitemcom{Pogo game with MinMax/AlphaBeta AI [C++, ConsoleControl]}
+			\cvitemcom{Pogo game with MinMax/AlphaBeta AI [\Cpp{}, ConsoleControl]}
 				{\href{https://github.com/pinam45/UTBM_IA41_Pogo}{Pogo}}
-			\cvlistitem{Multi-users file storage server [C++, SFML]}
+			\cvlistitem{Multi-users file storage server [\Cpp{}, SFML]}
+
+	%-------------------------------------------
+	%   Publications
+	%-------------------------------------------
+
+	\vspace*{\deletedSpace}
+	\printbibliography[title=Publications]{}
 
 	%-------------------------------------------
 	%   Interests
@@ -240,7 +245,7 @@
 	\vspace*{\deletedSpace}
 	\section{Interests}
 		\cvline{Computer science}
-			{New programming paradigms, procedural generation, operational research, software optimization, cryptography and the evolution of quantum computing.}
+			{Processor architecture, procedural generation, operational research, software optimization, cryptography, security and the evolution of quantum computing.}
 		\cvline{Science}
 			{Mathematics, physical system simulation, quantum physics\ldots}
 		\cvline{Sport}
