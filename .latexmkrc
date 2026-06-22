@@ -1,8 +1,7 @@
 # Default files
 @default_files = (
     "MPinard_CV_FR",
-    "MPinard_CV_FR_QC",
-    "MPinard_CV_EN_US",
+    "cover_letter",
 );
 
 # Generate PDF

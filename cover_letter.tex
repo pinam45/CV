@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+%----------------------------------------
+% Packages
+%----------------------------------------
+
+% Programming facilities
+\usepackage{etoolbox}
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\ifboolexpr{bool{xetex} or bool{luatex}}{%
+    \usepackage{fontspec}
+}{%
+    \usepackage[utf8]{inputenc}
+}
+\usepackage[french]{babel}
+
+% adjust the page margins
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+\recomputelengths{}
+
+% others
+\usepackage{graphicx}
+\usepackage{datenumber,fp}
+\usepackage{fontawesome5}
+\usepackage{relsize}
+\usepackage{hyperref}
+
+%----------------------------------------
+% General configuration
+%----------------------------------------
+
+% reduce underscores size
+\renewcommand{\_}{\textscale{.5}{\textunderscore}}
+
+%-------------------------------------------
+% Symbols from FontAwesome
+%-------------------------------------------
+
+\AtBeginDocument{%
+    \renewcommand*{\addresssymbol}       {\faIcon{map-marker-alt}\ }
+    \renewcommand*{\mobilephonesymbol}   {\faIcon{mobile-alt}\ }
+    \renewcommand*{\fixedphonesymbol}    {NONE\ }
+    \renewcommand*{\faxphonesymbol}      {NONE\ }
+    \renewcommand*{\emailsymbol}         {\faIcon[regular]{envelope}\ }
+    \renewcommand*{\homepagesymbol}      {\faIcon{globe}\ }
+    \renewcommand*{\linkedinsocialsymbol}{\faIcon{linkedin}\ }
+    \renewcommand*{\twittersocialsymbol} {\faIcon{twitter}\ }
+    \renewcommand*{\githubsocialsymbol}  {\faIcon{github}\ }
+}
+
+%-------------------------------------------
+% Commands definitions
+%-------------------------------------------
+
+% C++
+\newcommand{\Cpp}{%
+  \texorpdfstring{%
+    C\nolinebreak[4]\hspace{-.05em}%
+    \raisebox{.4ex}{\smaller\smaller\bfseries ++}%
+  }{C++}%
+}
+
+%-------------------------------------------
+% ModernCV theme
+%-------------------------------------------
+
+\moderncvtheme[blue]{classic}
+\nopagenumbers{}
+
+%-------------------------------------------
+% Personnal data
+%-------------------------------------------
+
+\firstname{Maxime}
+\familyname{Pinard}
+\title{Développeur \Cpp{}}
+\address{Croix, mobilité nationale}{}
+\phone[mobile]{+33~(0)6~87~92~55~09}
+\email{maxime.pin@live.fr}
+\social[orcid]{0000-0001-6258-4687}
+\social[linkedin]{maxime-pinard}
+\social[github]{pinam45}
+
+%-------------------------------------------
+% Letter data
+%-------------------------------------------
+
+\AtBeginDocument{%
+    \recipient{Entreprise}{Adresse}
+    \date{\today}
+    \subject{Candidature: poste}
+    \opening{Madame, Monsieur,}
+    \closing{Cordialement,}
+    \enclosure[Document joint]{CV}
+}
+
+\begin{document}
+\makelettertitle{}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra vitae ipsum lobortis malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia ex sit amet dui viverra, in ullamcorper dui congue. Duis lacus ipsum, sollicitudin in arcu at, cursus luctus justo. In hac habitasse platea dictumst. Aliquam eu bibendum elit. Aenean id massa lacus. Cras a lobortis ligula.
+
+Nunc nec placerat tortor, eu viverra purus. Integer tempor ligula neque, id semper ex varius eget. Fusce non suscipit massa. Praesent ut eleifend risus. Curabitur eget aliquam justo. Nunc non dui augue. Pellentesque at risus eu diam rutrum dictum. Pellentesque facilisis diam lacus, id efficitur lacus accumsan quis. Sed sit amet porta libero. Vivamus finibus odio a tristique facilisis. Etiam leo ante, dictum placerat dui eleifend, hendrerit varius sem.
+
+Sed mattis erat risus, a blandit dolor iaculis sit amet. Etiam id accumsan purus, sit amet tempor felis. Vivamus fermentum, massa non condimentum convallis, sem nulla pretium ipsum, non condimentum tortor ex eu ex. Curabitur iaculis molestie leo, non accumsan lorem. Nam laoreet lorem eu posuere hendrerit. Duis feugiat aliquet quam eget ultricies. In accumsan venenatis nisl, ut sagittis justo ultrices sit amet.
+
+Donec ut ipsum eu orci pulvinar lacinia in non odio. Sed tincidunt sem nulla, vel cursus sapien pellentesque a. Nulla porta tristique orci, non scelerisque nunc viverra vel. Phasellus laoreet nisl velit, sed condimentum dolor vestibulum at. Proin eleifend quis dolor vitae suscipit. Sed commodo blandit lorem at porttitor. Sed eu bibendum libero. Etiam in quam lacus.
+
+Praesent magna urna, mattis ac iaculis ut, euismod in justo. Quisque eleifend suscipit auctor. Nullam eget dolor non mi fermentum aliquet. Aliquam nec aliquet ligula. Mauris convallis malesuada ante condimentum fermentum. Aliquam tempus, neque eget eleifend fermentum, odio ligula ultricies nibh, a finibus mi ligula in diam. Aenean pellentesque dui vel dui maximus mollis. Curabitur iaculis justo ac enim sollicitudin, id pharetra justo tempus.
+
+\makeletterclosing{}
+\end{document}
