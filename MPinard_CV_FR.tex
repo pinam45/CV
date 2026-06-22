@@ -3,256 +3,260 @@
 \input{settings}
 
 % Space to delete between the sections
-\renewcommand{\deletedSpace}{-2mm}
+\renewcommand{\deletedSpace}{0mm}
 
 % Space to delete before the quote
-\renewcommand{\quoteDeletedSpace}{-3mm}
+\renewcommand{\quoteDeletedSpace}{0mm}
 
 %----------------------------------------------------------------------------------------
 %   PERSONAL DATA
 %----------------------------------------------------------------------------------------
 
 \preinfo{%
-	\faUser\ \myage{} ans, célibataire
+    \faUser\ \myage{} ans
 }
 \firstname{Maxime}
 \familyname{Pinard}
 \title{Développeur \Cpp{}}
-\address{Croix, France}{}
-\phone[mobile]{+33~(0)~687~925~509}
-%\phone[fixed]{}
-%\phone[fax]{}
+\address{Croix, mobilité nationale}{}
+\phone[mobile]{+33~(0)6~87~92~55~09}
 \email{maxime.pin@live.fr}
-\homepage{maxime.pinard.info}
+%\homepage{maxime.pinard.info}
+\social[orcid]{0000-0001-6258-4687}
 \social[linkedin]{maxime-pinard}
 \social[github]{pinam45}
 %\extrainfo{%
-%	extra info
+%    extra info
 %}
 \photo[60pt]{MPinard.jpg}
-\quote{Passionné d'informatique, je travaille en tant que développeur \Cpp{} chez IT-Finance.}
+\quote{Passionné d'informatique et d'optimisation, je me spécialise en \Cpp{} et son écosystème.\\
+    Mon projet personnel favori: \href{https://github.com/pinam45/dynamic_bitset}{dynamic\_bitset}}
 
 %----------------------------------------------------------------------------------------
 %   DOCUMENT BODY
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-	\maketitle
+    \maketitle
 
-	%-------------------------------------------
-	%   Education and qualifications
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Work experience
+    %-------------------------------------------
 
-	\vspace*{-10mm}
-	\section{Cursus}
-		\tlcventry{2018/9}{2020/2}
-			{Maîtrise en informatique (en double diplôme avec l'UTBM)}
-			{Université du Québec à Chicoutimi}
-			{Saguenay, Québec, Canada}
-			{\smaller\textit{Bac\raisebox{.15ex}{\smaller+}5}}
-			{}
-		\tlcventry{2016/9}{2020/2}
-			{Diplôme d'ingénieur en informatique, spécialité imagerie}
-			{Université de Technologie de Belfort-Montbéliard}
-			{Belfort}
-			{\smaller\textit{Bac\raisebox{.15ex}{\smaller+}5}}
-			{}
-		\tlcventry{2014/9}{2016/8}
-			{Diplôme d'études universitaires de technologie}
-			{Université de Technologie de Belfort-Montbéliard}
-			{Sèvenans}
-			{\smaller\textit{Bac\raisebox{.15ex}{\smaller+}2}}
-			{}
-		\tlcventry{2011/9}{2014/8}
-			{Baccalauréat S, option SVT, spécialité Mathématiques}
-			{Lycée Louis Aragon}
-			{Héricourt}
-			{\textit{Mention Bien}}
-			{}
+    \vspace*{0mm}
+    \section{Expériences Professionnelles}
+        \tlcventry{2020/6}{0}
+            {Ingénieur de développement \Cpp{}}
+            {IT-Finance, 6 ans (poste actuel)}
+            {Wasquehal}
+            {}
+            {}
+            \vspace{-5pt}
+            \begin{itemize}
+                \item Développement, optimisation et maintenance de systèmes de scans de marchés en \Cpp{}
+                \item Implémentation de mémoires partagées POSIX avec chargement et modification en temps réel par flux de données
+                \item Refonte et maintenance des systèmes de build avec CMake, et gestion des dépendances avec Conan 2
+                %\item Mise en place du packaging interne et vendoring des libs externes avec CMake et Conan 2
+                \item Mise en place des systèmes de CI sous Jenkins pour les tests, le code coverage et le packaging Debian
+                \item Automatisations en Python pour le monitoring, le suivit des déploiements, la veille technologique\ldots
+            \end{itemize}
+            \vspace{5pt}
+        \tllabelcventry{2019/9}{2020/2}{09/2019 - 02/2020}
+            {Stagiaire recherche et développement logiciel}
+            {Institut de Recherche en Informatique, Mathématiques, Automatique et Signal, 6 mois\hspace{-25pt}}
+            {Mulhouse}
+            {}
+            {}
+            \vspace{-5pt}
+            \begin{itemize}
+                \item Développement de métaheuristiques hybrides mémétiques pour le Unicost Set Cevering Problem\\
+                en \Cpp{} avec recherche poussé de performances: amélioration des meilleurs résultats connu à l'époque
+                \item Évaluations des performances sur le cluster HPC du méso-centre de Strasbourg et soumission à 2 conférences \cite{Pinard2020}
+            \end{itemize}
+            \vspace{5pt}
+        \tldoublelabelcventry{%
+                starta=2018/7,
+                enda=2018/8,
+                startb=2019/7,
+                endb=2019/8,
+                label={07-08/2018, 07-08/2019},
+            }
+            {Auxiliaire ambulancier}
+            {Ambulances Phoenix, 2\times{}2 mois}
+            {Héricourt}
+            {Prise en charge et transport de patients}
+            {}
+        \tllabelcventry{2017/8}{2018/1}{08/2017 - 01/2018}
+            {Stagiaire développement logiciel}
+            {Direction Générale de l'Armement Maîtrise de l'Information, 6 mois}
+            {Bruz}
+            {}
+            {}
+            \vspace{-5pt}
+            \begin{itemize}
+                \item Travail sur GenDbg, un débogueur multi langages, OS et architectures:\\
+                    \phantom{=}Développement en C du module de désassemblage pour les architectures MIPS et des tests unitaires associés
+                \item Travail sur YaCo, plugin IDA Pro de rétro-ingénieurie collaborative utilisant libgit2:\\
+                    \phantom{=}Portage en \Cpp{}, amélioration de la gestion interne git et de la capture des évènements IDA
+            \end{itemize}
+            \vspace{5pt}
+        \tldoublelabelcventry{%
+                starta=2015/2,
+                enda=2015/2,
+                startb=2016/2,
+                endb=2016/2,
+                label={02/2015, 02/2016},
+            }
+            {Animateur}
+            {JAB France, 2\times{}1 semaine}
+            {Evolène / Contamines-Montjoie}
+            {Camp de ski de 50 jeunes, équipe de 20 animateurs}
+            {}
+        \tllabelcventry{2015/1}{2015/2}{01/2015}
+            {Stagiaire}
+            {Souchier SAS, 4 semaines}
+            {Héricourt}
+            {Jointage et montage d'appareils de désenfumage}
+            {}
 
-	%-------------------------------------------
-	%   Languages
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Education and qualifications
+    %-------------------------------------------
 
-	\vspace*{\deletedSpace}
-	\section{Langues}
-		\cvdoubleitem{\bfseries Français}{langue maternelle}{\bfseries Anglais}{usage courant et professionnel}
-		\cvdoubleitem{\bfseries Espagnol}{niveau scolaire}{\bfseries Japonais}{élémentaire}
+    \vspace*{\deletedSpace}
+    \section{Cursus}
+        \tlcventry{2018/9}{2020/2}
+            {Maîtrise en informatique (en double diplôme avec l'UTBM)}
+            {Université du Québec à Chicoutimi}
+            {Saguenay, Canada}
+            {\smaller\textit{Bac\raisebox{.15ex}{\smaller+}5}}
+            {}
+        \tlcventry{2016/9}{2020/2}
+            {Diplôme d'ingénieur en informatique, spécialité imagerie}
+            {Université de Technologie de Belfort-Montbéliard}
+            {Belfort}
+            {\smaller\textit{Bac\raisebox{.15ex}{\smaller+}5}}
+            {}
+        \tlcventry{2014/9}{2016/8}
+            {Diplôme d'études universitaires de technologie}
+            {Université de Technologie de Belfort-Montbéliard}
+            {Sèvenans}
+            {\smaller\textit{Bac\raisebox{.15ex}{\smaller+}2}}
+            {}
+        % \tlcventry{2011/9}{2014/8}
+        %     {Baccalauréat S, option SVT, spécialité Mathématiques}
+        %     {Lycée Louis Aragon}
+        %     {Héricourt}
+        %     {\textit{Mention Bien}}
+        %     {}
 
-	%-------------------------------------------
-	%   Computer skills
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Computer skills
+    %-------------------------------------------
 
-	\vspace*{\deletedSpace}
-	\section{Compétences informatiques}
-		\cvline{Langages}{\Cpp{}, C, Java, \LaTeX{}/Ti\textit{k}Z, Python, Bash, CUDA, SQL, HTML/CSS, Assembleur\ldots}
-		\cvline{Méthodes/Outils}{Agile, Test unitaires, Patrons de conception, UML, BPMN, git, CMake, Make, Clang Tools, Maven, Regex}
-		\cvline{Métaheuristiques}{Recherche tabou, recuit simulé, algorithmes génétiques, algorithmes de colonies de fourmis, PSO}
-		\cvline{Bibliothèques}{boost, fmt, spdlog, OpenGL, OpenCL, OpenMP, MPI, GTest, Catch2, Capstone, Keystone, Json, SFML, ImGui, GLFW, GLM, libmpg123, TagLib, cxxopts, inja, JavaFx, JUnit4}
-		\cvitem{Administration système}{GNU/Linux (Debian 8+), hébergement de sites web Java EE et de services web Docker}
-		\cvline{IDE}{Visual Studio 2017/2019, CLion, IntelliJ IDEA}
+    \vspace*{\deletedSpace}
+    \section{Compétences informatiques}
+        \cvline{Langages}{\Cpp{}, C, Python, SQL, Bash, Java, \LaTeX{}/Ti\textit{k}Z, CUDA, HTML/CSS, Assembleur\ldots}
+        \cvline{Outils}{git, CMake, Make, Conan 2, Docker, GNU Tools, Clang Tools, Sanitizers, perf, Valgrind, Doxygen, gcov/lcov, Jenkins\ldots}
+        \cvline{Méthodes}{Agile, Test unitaires / fonctionnels / intégration, TDD, Design patterns, UML, BPMN}
+        \cvline{Métaheuristiques}{Algorithmes génétiques et mémétiques, recherche tabou, recuit simulé, colonies de fourmis, PSO}
+        \cvline{Bibliothèques}{fmt, boost, PEGTL, spdlog, Catch2, GTest, google/benchmark, nlohmann/json, simdjson, SFML, ImGui, CLI11, cxxopts, inja, GLFW, OpenGL, OpenCL, OpenMP, MPI, Capstone, Keystone, GLM, libmpg123, TagLib\ldots}
+        \cvitem{Administration système}{GNU/Linux (Debian), hébergement de services Docker, systèmes de monitoring et de backup}
+        %\cvline{IDE}{CLion, Pycharm, IntelliJ IDEA, Visual Studio, Sublime Text}
 
-	%-------------------------------------------
-	%   Work experience
-	%-------------------------------------------
+    %-------------------------------------------
+    \newpage
+    %-------------------------------------------
 
-	\vspace*{\deletedSpace}
-	\section{Expériences Professionnelles}
-		\tlcventry{2020/6}{0}
-			{Développeur \Cpp{}}
-			{IT-Finance}
-			{Wasquehal, France}
-			{Développement, optimisation et maintenance de systèmes de trading}
-			{}
-		\tllabelcventry{2019/9}{2020/2}{09/2019 - 02/2020}
-			{Stagiaire recherche et développement logiciel}
-			{Institut de Recherche en Informatique, Mathématiques, Automatique et Signal, 6 mois\hspace{-25pt}}
-			{Mulhouse}
-			{}
-			{}
-			\vspace{-5pt}
-			\begin{itemize}
-				\item Développement de métaheuristiques hybrides de type mémétiques pour le problème de couverture par ensembles\\
-				et implémentation en \Cpp{} avec recherche poussé de performances
-				\item Évaluations des performances sur le cluster HPC du méso-centre de Strasbourg et soumission à 2 conférences \cite{Pinard2020}
-			\end{itemize}
-			\vspace{5pt}
-		% \tllabelcventry{2019/7}{2019/8}{07-08/2019}
-		% 	{Auxiliaire ambulancier}
-		% 	{Ambulances Phoenix, 2 mois}
-		% 	{Héricourt}
-		% 	{Prise en charge et transport de patients}
-		% 	{}
-		% \tllabelcventry{2018/7}{2018/8}{07-08/2018}
-		% 	{Auxiliaire ambulancier}
-		% 	{Ambulances Phoenix, 2 mois}
-		% 	{Héricourt}
-		% 	{Prise en charge et transport de patients}
-		% 	{}
-		\tldoublelabelcventry{%
-				starta=2018/7,
-				enda=2018/8,
-				startb=2019/7,
-				endb=2019/8,
-				label={07-08/2018, 07-08/2019},
-			}
-			{Auxiliaire ambulancier}
-			{Ambulances Phoenix, 4 mois}
-			{Héricourt}
-			{Prise en charge et transport de patients}
-			{}
-		\tllabelcventry{2017/8}{2018/1}{08/2017 - 01/2018}
-			{Stagiaire développement logiciel}
-			{Direction Générale de l'Armement Maîtrise de l'Information, 6 mois}
-			{Bruz}
-			{}
-			{}
-			\vspace{-5pt}
-			\begin{itemize}
-				\item Travail sur GenDbg, un débogueur multi langages, OS et architectures:\\
-					\phantom{=}Développement en C du module de désassemblage pour les architectures MIPS et des tests unitaires associés
-				\item Travail sur YaCo, plugin IDA Pro de rétro-ingénieurie collaborative utilisant Git:\\
-					\phantom{=}Portage en \Cpp{} et amélioration de la gestion du dépôt Git et de la capture des évènements IDA
-			\end{itemize}
-			\vspace{5pt}
-		\tllabelcventry{2016/2}{2016/2}{02/2016}
-			{Animateur}
-			{JAB France, 1 semaine}
-			{Evolène, Suisse}
-			{Camp de ski de 40 jeunes, équipe de 15 animateurs}
-			{}
-		\tllabelcventry{2015/2}{2015/2}{02/2015}
-			{Animateur}
-			{JAB France, 1 semaine}
-			{Contamines}
-			{Camp de ski de 50 jeunes, équipe de 20 animateurs}
-			{}
-		\tllabelcventry{2015/1}{2015/2}{01/2015}
-			{Stagiaire}
-			{Souchier SAS, 4 semaines}
-			{Héricourt}
-			{Jointage et montage d'appareils de désenfumage}
-			{}
+    %-------------------------------------------
+    %   Projects
+    %-------------------------------------------
 
-	%-------------------------------------------
-	\newpage
-	%-------------------------------------------
+    %\vspace*{\deletedSpace}
+    \section{Projets publics}
+        \subsection{Personnels}
+            \cvitemcom{Implémentation header-only d'un dynamic bitset et de ces test unitaires [\Cpp{}, Catch2]}
+                {\href{https://github.com/pinam45/dynamic_bitset}{dynamic\_bitset}}
+            \cvitemcom{Benchmarks de différentes implémentations de dynamic bitset (WIP) [\Cpp{}, google/benchmark]}
+                {\href{https://github.com/pinam45/dynamic_bitset_benchmarks}{dynamic\_bitset\_benchmarks}}
+            \cvitemcom{Lecteur de musique [\Cpp{}, ImGui, SFML, spdlog, libmpg123]}
+                {\href{https://github.com/pinam45/MagicPlayer}{MagicPlayer}}
+            \cvitemcom{Fonctions d'aide à la configuration des projets C/\Cpp{} (clang-format, ccache, sanitizers,\ldots) [CMake]}
+                {\href{https://github.com/pinam45/CMutils}{CMutils}}
+            \cvitemcom{Convertisseur de base, exemple ImGui/SFML [\Cpp{}, ImGui, SFML]}
+                {\href{https://github.com/pinam45/BaseConverter}{BaseConverter}}
+            \cvitemcom{Librairie graphique en console pour systèmes basé Unix et Windows [C]}
+                {\href{https://github.com/pinam45/ConsoleControl}{ConsoleControl}}
+            \cvitemcom{Dungeon crawler avec niveaux à génération procédurale [Java, JavaFx]}
+                {\href{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul-the-Game}}
+            \cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z de la 1\textsuperscript{ère} et 4\textsuperscript{ème} de couverture des rapports de stage UTBM}
+                {\href{https://github.com/pinam45/utbm-latex-internship-report-covers}{utbm-latex-internship-report-covers}}
+            \cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z Beamer du theme pour présentations UTBM}
+                {\href{https://github.com/pinam45/utbm-beamer-theme}{utbm-beamer-theme}}
+            % \cvitemcom{Jeu type Snake multijoueur (réseau local) [\Cpp{}, SFML]}
+            %     {\href{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
+        \subsection{Recherche}
+            \cvitemcom{Calculateur d'hyperplans dans des géométries finies de dimension 4 (orienté performances) [\Cpp{}] \cite{Boulmier2019}}
+                {\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
+        \subsection{Stages}
+            \cvitemcom{Programme de résolution du Set Cover Problem [\Cpp{}, dynamic\_bitset, spglog, json, cxxopts] \cite{Pinard2020}}
+                {\href{https://github.com/pinam45/USCP}{USCP}, \href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Rapport de stage}}
+            \cvitemcom{Programme de traitement des résultats du Set Cover Problem [\Cpp{}, spglog, json, cxxopts, inja] \cite{Pinard2020}}
+                {\href{https://github.com/pinam45/USCP}{USCP}, \href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Rapport de stage}}
+            \cvitemcom{Plugin Hex-Rays IDA de reverse-engineering collaboratif [\Cpp{}, GTest, IDA]}
+                {\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Rapport de stage}}
+            \cvitemcom{Module d'assemblage/désassemblage pour code assembleur MIPS [C, Capstone, Keystone, GTest]}
+                {\href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Rapport de stage}}
+        \subsection{Universités}
+            \cvitemcom{Algorithmes pour la résolution du Set Cover Problem [\Cpp{}, spdlog, dynamic\_bitset]}
+                {\href{https://github.com/pinam45/UQAC_8INF870_Set_cover_problem}{Set\_cover\_problem}}
+            \cvitem{}{~~~> Recherche exhaustive, Greedy, Branch and Bound, Recuit Simulé, Algorithme Génétique et Mémétique}
+            \cvitemcom{Construction et rendu d'un objet 3D paramétrique avec OpenGL [\Cpp{}, GLFW, ImGui]}
+                {\href{https://github.com/pinam45/UTBM\_IN55\_ParametricObjectsConstruction}{ParametricObjectsConstruction}}
+            \cvitemcom{Clone de MiniMetro: simulateur de gestion de métros [Java, JavaFx]}
+                {\href{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
+            \cvitemcom{Jeux de Pogo avec IA MinMax/AlphaBeta [\Cpp{}, ConsoleControl]}
+                {\href{https://github.com/pinam45/UTBM_IA41_Pogo}{Pogo}}
+            %\cvlistitem{Serveur de stockage de fichiers multi-utilisateurs [\Cpp{}, SFML]}
 
-	%-------------------------------------------
-	%   Others qualifications
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Publications
+    %-------------------------------------------
 
-	%\vspace*{\deletedSpace}
-	\section{Certifications autres}
-		\cvlistitem{Permis de conduire}{}
-		\cvlistitem{Prévention et Secours Civiques de niveau 1 (PSC1)}{}
+    \vspace*{\deletedSpace}
+    \printbibliography[title=Publications]{}
+    \vspace*{-2mm}
 
-	%-------------------------------------------
-	%   Projects
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Languages
+    %-------------------------------------------
 
-	\vspace*{\deletedSpace}
-	\section{Projets}
-		\subsection{Personnels}
-			\cvitemcom{Implémentation header-only d'un dynamic bitset et de ces test unitaires [\Cpp{}, Catch2]}
-				{\href{https://github.com/pinam45/dynamic_bitset}{dynamic\_bitset}}
-			\cvitemcom{Lecteur de musique [\Cpp{}, ImGui, SFML, spdlog, libmpg123]}
-				{\href{https://github.com/pinam45/MagicPlayer}{MagicPlayer}}
-			\cvitemcom{Fonctions d'aide à la configuration des projets C/\Cpp{} (clang-format, ccache, sanitizers,\ldots) [CMake]}
-				{\href{https://github.com/pinam45/CMutils}{CMutils}}
-			\cvitemcom{Convertisseur de base, exemple ImGui/SFML [\Cpp{}, ImGui, SFML]}
-				{\href{https://github.com/pinam45/BaseConverter}{BaseConverter}}
-			\cvitemcom{Librairie graphique en console pour systèmes basé Unix et Windows [C]}
-				{\href{https://github.com/pinam45/ConsoleControl}{ConsoleControl}}
-			\cvitemcom{Dungeon crawler avec niveaux à génération procédurale [Java, JavaFx]}
-				{\href{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul-the-Game}}
-			\cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z de la 1\textsuperscript{ère} et 4\textsuperscript{ème} de couverture des rapports de stage UTBM}
-				{\href{https://github.com/pinam45/utbm-latex-internship-report-covers}{utbm-latex-internship-report-covers}}
-			\cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z Beamer du theme pour présentations UTBM}
-				{\href{https://github.com/pinam45/utbm-beamer-theme}{utbm-beamer-theme}}
-			\cvitemcom{Jeu type Snake multijoueur (réseau local) [\Cpp{}, SFML]}
-				{\href{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
-		\subsection{Recherche}
-			\cvitemcom{Calculateur d'hyperplans dans des géométries finies de dimension 4 (orienté performances) [\Cpp{}] \cite{Boulmier2019}}
-				{\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
-		\subsection{Stages}
-			\cvitemcom{Programme de résolution du Set Cover Problem [\Cpp{}, dynamic\_bitset, spglog, json, cxxopts] \cite{Pinard2020}}
-				{\href{https://github.com/pinam45/USCP}{USCP}, \href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Rapport de stage}}
-			\cvitemcom{Programme de traitement des résultats du Set Cover Problem [\Cpp{}, spglog, json, cxxopts, inja] \cite{Pinard2020}}
-				{\href{https://github.com/pinam45/USCP}{USCP}, \href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Rapport de stage}}
-			\cvitemcom{Plugin Hex-Rays IDA de reverse-engineering collaboratif [\Cpp{}, GTest, IDA]}
-				{\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Rapport de stage}}
-			\cvitemcom{Module d'assemblage/désassemblage pour code assembleur MIPS [C, Capstone, Keystone, GTest]}
-				{\href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Rapport de stage}}
-		\subsection{Universités}
-			\cvitemcom{Algorithmes pour la résolution du Set Cover Problem [\Cpp{}, spdlog, dynamic\_bitset]}
-				{\href{https://github.com/pinam45/UQAC_8INF870_Set_cover_problem}{Set\_cover\_problem}}
-			\cvitem{}{~~~> Recherche exhaustive, Greedy, Branch and Bound, Recuit Simulé, Algorithme Génétique et Mémétique}
-			\cvitemcom{Construction et rendu d'un objet paramétrique avec OpenGL [\Cpp{}, GLFW, ImGui]}
-				{\href{https://github.com/pinam45/UTBM\_IN55\_ParametricObjectsConstruction}{ParametricObjectsConstruction}}
-			\cvitemcom{Clone de MiniMetro: simulateur de gestion de métros [Java, JavaFx]}
-				{\href{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
-			\cvitemcom{Jeux de Pogo avec IA MinMax/AlphaBeta [\Cpp{}, ConsoleControl]}
-				{\href{https://github.com/pinam45/UTBM_IA41_Pogo}{Pogo}}
-			\cvlistitem{Serveur de stockage de fichiers multi-utilisateurs [\Cpp{}, SFML]}
+    \vspace*{\deletedSpace}
+    \section{Langues}
+        \cvdoubleitem{\cvskill{5} \bfseries Français}{langue maternelle}{\cvskill{1} \bfseries Espagnol}{vagues souvenirs}
+        \cvdoubleitem{\cvskill{4} \bfseries Anglais}{usage courant et professionnel}{\cvskill{0} \bfseries Japonais}{j'ai tout oublié}
 
-	%-------------------------------------------
-	%   Publications
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Others qualifications
+    %-------------------------------------------
 
-	\vspace*{\deletedSpace}
-	\printbibliography[title=Publications]{}
+    \vspace*{\deletedSpace}
+    \section{Certifications autres}
+        \cvlistitem{Permis de conduire}{}
+        \cvlistitem{Prévention et Secours Civiques de niveau 1 (PSC1)}{}
 
-	%-------------------------------------------
-	%   Interests
-	%-------------------------------------------
+    %-------------------------------------------
+    %   Interests
+    %-------------------------------------------
 
-	\vspace*{\deletedSpace}
-	\section{Centres d'intérêts}
-		\cvline{L'informatique}
-			{L'architecture des processeurs, la génération procédurale, la recherche opérationnelle, l'optimisation, la cryptographie, la sécurité et l'évolution de l'informatique quantique.}
-		\cvline{Les sciences}
-			{Les mathématiques, la simulation de système physique, la physique quantique\ldots}
-		\cvline{Le sport}
-			{Le ski et les sports d'hivers, le vélo, la marche en montagne, la natation (3h par semaine).}
+    \vspace*{\deletedSpace}
+    \section{Centres d'intérêts}
+        \cvline{L'informatique}
+            {L'architecture des processeurs, la génération procédurale, la recherche opérationnelle, l'optimisation, la cryptographie, la sécurité et l'évolution de l'informatique quantique (veille technologique sur \href{http://links.pinard.io}{links.pinard.io})}
+        \cvline{La cinéma}
+            {200 à 250 films vu par an (diary sur \href{https://letterboxd.com/pinam45/diary/}{letterboxd})}
+        \cvline{Les sciences}
+            {Les mathématiques, la simulation de système physique, la physique quantique\ldots}
+        \cvline{Le sport}
+            {La randonnée, le ski et les sports d'hivers, la natation}
 \end{document}

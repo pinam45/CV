@@ -18,8 +18,6 @@
 \newlength{\quotecustomwidth}
 \setlength{\quotecustomwidth}{0.65\textwidth}% default value
 % optional maketitle width to force a certain width (if set to 0pt, the width is calculated automatically)
-\newlength{\makecvtitlenamewidth}
-\setlength{\makecvtitlenamewidth}{0pt}% dummy value
 \renewcommand*{\makecvtitle}{%
 	{\hypersetup{urlcolor=color2}
 	% recompute lengths (in case we are switching from letter to resume, or vice versa)
@@ -63,10 +61,7 @@
 	% name and title
 	\newlength{\makecvtitledetailswidth}\settowidth{\makecvtitledetailswidth}{\usebox{\makecvtitledetailsbox}}%
 	\newlength{\makecvtitlepicturewidth}\settowidth{\makecvtitlepicturewidth}{\usebox{\makecvtitlepicturebox}}%
-	\ifthenelse{\lengthtest{\makecvtitlenamewidth=0pt}}% check for dummy value (equivalent to \ifdim\makecvtitlenamewidth=0pt)
-		{\setlength{\makecvtitlenamewidth}{\textwidth-\makecvtitledetailswidth-\makecvtitlepicturewidth}}%
-		{}%
-	\begin{minipage}[b]{\makecvtitlenamewidth - 10mm}%
+	\begin{minipage}[b]{\textwidth-\makecvtitledetailswidth-\makecvtitlepicturewidth - 10mm}%
 		\raggedright
 		\titlestyle{\@title}\\
 		\hfill\\
@@ -177,16 +172,13 @@
 %-------------------------------------------
 
 \AtBeginDocument{%
-
-\setlength{\quotecustomwidth}{0.85\textwidth}
-
-%\setlength{\quotewidth}{0.65\textwidth}
-%\setlength{\separatorcolumnwidth}{0.025\textwidth}
-%\setlength{\maincolumnwidth}{\textwidth}
-%\settowidth{\listitemsymbolwidth}{\listitemsymbol}
-%\sethintscolumnlength{<length>} % <length> is the desired length in a unit LaTeX understands
-%\sethintscolumntowidth{<string>} % where <string> is a string of the desired length (usually, the longest string that has to appear in the column)
-
+    \setlength{\quotecustomwidth}{0.85\textwidth}
+    %\setlength{\quotewidth}{0.65\textwidth}
+    %\setlength{\separatorcolumnwidth}{0.025\textwidth}
+    %\setlength{\maincolumnwidth}{\textwidth}
+    %\settowidth{\listitemsymbolwidth}{\listitemsymbol}
+    %\sethintscolumnlength{<length>} % <length> is the desired length in a unit LaTeX understands
+    %\sethintscolumntowidth{<string>} % where <string> is a string of the desired length (usually, the longest string that has to appear in the column)
 }
 
 %-------------------------------------------
@@ -194,44 +186,40 @@
 %-------------------------------------------
 
 \AtBeginDocument{%
+    % fonts
+    \renewcommand*{\titlefont}{\fontsize{32}{14}\mdseries\upshape}
+    \renewcommand*{\namefont}{\fontsize{19}{14}\mdseries\upshape}
+    %\renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
+    %\renewcommand*{\quotefont}{\large\slshape}
+    %\renewcommand*{\sectionfont}{\Large\bfseries\upshape}
+    %\renewcommand*{\subsectionfont}{\large\upshape\fontseries{sb}\selectfont}
+    %\renewcommand*{\hintfont}{\bfseries}
 
-% fonts
-\renewcommand*{\titlefont}{\fontsize{32}{14}\mdseries\upshape}
-\renewcommand*{\namefont}{\fontsize{19}{14}\mdseries\upshape}
-%\renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
-%\renewcommand*{\quotefont}{\large\slshape}
-%\renewcommand*{\sectionfont}{\Large\bfseries\upshape}
-%\renewcommand*{\subsectionfont}{\large\upshape\fontseries{sb}\selectfont}
-%\renewcommand*{\hintfont}{\bfseries}
-
-% styles
-\renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color1}{#1}}}
-\renewcommand*{\namestyle}[1]{{\namefont\textcolor{color2!85}{#1}}}
-%\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color2}{#1}}}
-%\renewcommand*{\quotestyle}[1]{{\quotefont\textcolor{color1}{#1}}}
-%\renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
-%\renewcommand*{\subsectionstyle}[1]{{\subsectionfont\textcolor{color1}{#1}}}
-%\renewcommand*{\hintstyle}[1]{{\hintfont\textcolor{color0}{#1}}}
-
+    % styles
+    \renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color1}{#1}}}
+    \renewcommand*{\namestyle}[1]{{\namefont\textcolor{color2!85}{#1}}}
+    %\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color2}{#1}}}
+    %\renewcommand*{\quotestyle}[1]{{\quotefont\textcolor{color1}{#1}}}
+    %\renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
+    %\renewcommand*{\subsectionstyle}[1]{{\subsectionfont\textcolor{color1}{#1}}}
+    %\renewcommand*{\hintstyle}[1]{{\hintfont\textcolor{color0}{#1}}}
 }
 
 %-------------------------------------------
 %   hyperref colors
 %-------------------------------------------
 
-\AtBeginDocument{%
-
-\hypersetup{
-	colorlinks=true,
-	%linkcolor=red,
-	%anchorcolor=black,
-	citecolor=green,
-	%filecolor=cyan,
-	%menucolor=red,
-	urlcolor=color1,
-	linktoc=all
-}
-
+\AtEndPreamble{%
+    \hypersetup{
+        colorlinks=true,
+        %linkcolor=red,
+        %anchorcolor=black,
+        citecolor=green,
+        %filecolor=cyan,
+        %menucolor=red,
+        urlcolor=color1,
+        linktoc=all
+    }
 }
 
 %-------------------------------------------
@@ -239,17 +227,15 @@
 %-------------------------------------------
 
 \AtBeginDocument{%
-
-\renewcommand*{\addresssymbol}       {\faMapMarker\ }
-\renewcommand*{\mobilephonesymbol}   {\faMobile\ }
-\renewcommand*{\fixedphonesymbol}    {\foPhone\ }
-\renewcommand*{\faxphonesymbol}      {\faFax\ }
-\renewcommand*{\emailsymbol}         {\faEnvelopeO\ }
-\renewcommand*{\homepagesymbol}      {\faGlobe\ }
-\renewcommand*{\linkedinsocialsymbol}{\faLinkedin\ }
-\renewcommand*{\twittersocialsymbol} {\faTwitter\ }
-\renewcommand*{\githubsocialsymbol}  {\faGithub\ }
-
+    \renewcommand*{\addresssymbol}       {\faIcon{map-marker-alt}\ }
+    \renewcommand*{\mobilephonesymbol}   {\faIcon{mobile-alt}\ }
+    \renewcommand*{\fixedphonesymbol}    {NONE\ }
+    \renewcommand*{\faxphonesymbol}      {NONE\ }
+    \renewcommand*{\emailsymbol}         {\faIcon[regular]{envelope}\ }
+    \renewcommand*{\homepagesymbol}      {\faIcon{globe}\ }
+    \renewcommand*{\linkedinsocialsymbol}{\faIcon{linkedin}\ }
+    \renewcommand*{\twittersocialsymbol} {\faIcon{twitter}\ }
+    \renewcommand*{\githubsocialsymbol}  {\faIcon{github}\ }
 }
 
 %-------------------------------------------
@@ -277,7 +263,12 @@
 \newcommand{\quoteDeletedSpace}{0mm}
 
 % C++
-\newcommand{\Cpp}{\texorpdfstring{{\normalfont{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\smaller\smaller\bfseries ++}}}}{C++}}
+\newcommand{\Cpp}{%
+  \texorpdfstring{%
+    C\nolinebreak[4]\hspace{-.05em}%
+    \raisebox{.4ex}{\smaller\smaller\bfseries ++}%
+  }{C++}%
+}
 
 %-------------------------------------------
 %   Age computation
