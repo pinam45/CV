@@ -1,27 +1,22 @@
 #=============================================================================
 # Project related variables
-CV_BASENAME             = MPinard_CV
-CV_VERSIONS             = FR FR_QC EN_US
-HTML_ZOOM               = 1.3
+TEX_FILES               = MPinard_CV_FR cover_letter
 
 #=============================================================================
 # Commands variables
 LATEX_COMPILER_CMD      = latexmk -g -bibtex -lualatex -silent
-PDF_TO_HTML_CMD         = pdf2htmlEX --process-outline 0 --zoom $(HTML_ZOOM)
 DISPLAY                 = printf
 RM                      = rm -f
 
 #=============================================================================
 # Other
-TO_DELETE_EXT           = .aux .bbl .bcf .blg .run.xml .fdb_latexmk .fls .log .out .synctex.gz .pdf .html
+TO_DELETE_EXT           = .aux .bbl .bcf .blg .run.xml .fdb_latexmk .fls .log .out .synctex.gz .pdf
 LATEX_COMPILER_SILENT   = 1>/dev/null 2>/dev/null
-PDF_TO_HTML_CMD_SILENT  = 1>/dev/null 2>/dev/null
 
 #=============================================================================
 # Automatic variables
-TARGETS                 = $(addprefix $(CV_BASENAME)_,$(CV_VERSIONS))
-HTML_TARGETS            = $(addsuffix .pdf,$(TARGETS))
-PDF_TARGETS             = $(addsuffix .html,$(TARGETS))
+TARGETS                 = $(TEX_FILES)
+PDF_TARGETS             = $(addsuffix .pdf,$(TARGETS))
 TO_DELETE               = $(foreach ext,$(TO_DELETE_EXT),$(foreach target,$(TARGETS),$(target)$(ext)))
 
 #=============================================================================
@@ -29,12 +24,6 @@ TO_DELETE               = $(foreach ext,$(TO_DELETE_EXT),$(foreach target,$(TARG
 define launch_latex_compiler
 	@$(DISPLAY) "\033[0m\033[1;34m>\033[0m Executing $(LATEX_COMPILER_CMD)\n"
 	$(LATEX_COMPILER_CMD) $(1) $(if $(SILENT), $(LATEX_COMPILER_SILENT))
-
-endef
-
-define launch_pdf_to_html
-	@$(DISPLAY) "\033[0m\033[1;34m>\033[0m Executing $(PDF_TO_HTML_CMD)\n"
-	$(PDF_TO_HTML_CMD) $(1) $(if $(SILENT), $(PDF_TO_HTML_CMD_SILENT))
 
 endef
 
@@ -62,7 +51,7 @@ silent:
 
 
 .PHONY: all
-all: $(PDF_TARGETS) $(HTML_TARGETS)
+all: $(PDF_TARGETS)
 	@$(DISPLAY) "\n\n"
 
 
@@ -71,20 +60,10 @@ pdf: $(PDF_TARGETS)
 	@$(DISPLAY) "\n\n"
 
 
-.PHONY: html
-html: $(HTML_TARGETS)
-	@$(DISPLAY) "\n\n"
-
-
 %.pdf: %.tex FORCE
 	$(eval DOCUMENT_NAME:=$(patsubst %.pdf,%,$@))
 	@$(DISPLAY) "\nBuilding \033[0;33m$@\033[0m:\n"
 	$(call launch_latex_compiler, $(DOCUMENT_NAME))
-
-
-%.html: %.pdf
-	@$(DISPLAY) "\nBuilding \033[0;33m$@\033[0m:\n"
-	$(call launch_pdf_to_html, $^)
 
 
 .PHONY: clean
