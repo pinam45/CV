@@ -270,6 +270,25 @@
   }{C++}%
 }
 
+% CV tag: \cvtag{Linux}
+\newcommand{\cvtag}[1]{%
+  \tcbox[
+    on line,
+    boxsep=0pt, left=3pt, right=3pt, top=1.5pt, bottom=1.5pt,
+    arc=2pt, boxrule=0.4pt,
+    colframe=color1,
+    colback=color1!10,
+    coltext=color1,
+    fontupper=\footnotesize\bfseries
+  ]{\raisebox{0pt}[1.8ex][0.5ex]{#1}}%
+}
+
+% Multiple CV tags: \cvtags{Linux, Windows, MacOS}
+\newcommand{\cvtags}[1]{%
+  \renewcommand*{\do}[1]{\cvtag{##1}\hspace{3pt}}%
+  \docsvlist{#1}%
+}
+
 %-------------------------------------------
 %   Age computation
 %-------------------------------------------
