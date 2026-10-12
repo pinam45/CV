@@ -55,10 +55,10 @@
             \begin{itemize}
                 \item Développement, optimisation et maintenance de systèmes de scans de marchés en \Cpp{}17/20
                 \item Implémentation de mémoires partagées POSIX avec chargement et modification en temps réel par flux de données
-                \item Refonte et maintenance des systèmes de build avec CMake, et gestion des dépendances avec Conan 2
-                %\item Mise en place du packaging interne et vendoring des libs externes avec CMake et Conan 2
-                \item Mise en place des systèmes de CI sous Jenkins pour les tests, le code coverage et le packaging Debian
-                \item Automatisations en Python pour le monitoring, le suivit des déploiements, la veille technologique\ldots
+                \item Focus particulier sur les performances et l'optimisation des accès mémoires hautement parallèles
+                \item Refonte et maintenance des systèmes de build CMake, et gestion des dépendances Conan
+                \item Mise en place des systèmes de CI sous Jenkins pour le build, les tests, le code coverage et le packaging
+                \item Automatisations en Python pour le monitoring, le suivi des déploiements, la veille technologique\ldots
             \end{itemize}
             \vspace{5pt}
         \tllabelcventry{2019/9}{2020/2}{09/2019 - 02/2020}
@@ -69,8 +69,8 @@
             {}
             \vspace{-5pt}
             \begin{itemize}
-                \item Développement de métaheuristiques hybrides mémétiques pour le Unicost Set Cevering Problem\\
-                en \Cpp{} avec recherche poussé de performances: amélioration des meilleurs résultats connu à l'époque
+                \item Développement de métaheuristiques hybrides mémétiques pour le Unicost Set Covering Problem\\
+                en \Cpp{} avec recherche poussée de performances: amélioration des meilleurs résultats connus à l'époque
                 \item Évaluations des performances sur le cluster HPC du méso-centre de Strasbourg et soumission à 2 conférences \cite{Pinard2020}
             \end{itemize}
             \vspace{5pt}
@@ -96,7 +96,7 @@
             \begin{itemize}
                 \item Travail sur GenDbg, un débogueur multi langages, OS et architectures:\\
                     \phantom{=}Développement en C du module de désassemblage pour les architectures MIPS et des tests unitaires associés
-                \item Travail sur YaCo, plugin IDA Pro de rétro-ingénieurie collaborative utilisant libgit2:\\
+                \item Travail sur YaCo, plugin IDA Pro de rétro-ingénierie collaborative utilisant libgit2:\\
                     \phantom{=}Portage en \Cpp{}, amélioration de la gestion interne git et de la capture des évènements IDA
             \end{itemize}
             \vspace{5pt}
@@ -158,7 +158,7 @@
     \section{Compétences informatiques}
         \cvline{Langages}{\Cpp{}, C, Python, SQL, Bash, Java, \LaTeX{}/Ti\textit{k}Z, CUDA, HTML/CSS, Assembleur\ldots}
         \cvline{Outils}{git, CMake, Make, Conan 2, Docker, GNU Tools, Clang Tools, Sanitizers, perf, Valgrind, Doxygen, gcov/lcov, Jenkins\ldots}
-        \cvline{Méthodes}{Agile, Test unitaires / fonctionnels / intégration, TDD, Design patterns, UML, BPMN}
+        \cvline{Méthodes}{Agile, Tests unitaires / fonctionnels / intégration, TDD, Design patterns, UML, BPMN}
         \cvline{Métaheuristiques}{Algorithmes génétiques et mémétiques, recherche tabou, recuit simulé, colonies de fourmis, PSO}
         \cvline{Bibliothèques}{fmt, boost, PEGTL, spdlog, Catch2, GTest, google/benchmark, nlohmann/json, simdjson, SFML, ImGui, CLI11, cxxopts, inja, GLFW, OpenGL, OpenCL, OpenMP, MPI, Capstone, Keystone, GLM, libmpg123, TagLib\ldots}
         \cvitem{Administration système}{GNU/Linux (Debian), hébergement de services Docker, systèmes de monitoring et de backup}
@@ -175,7 +175,7 @@
     %\vspace*{\deletedSpace}
     \section{Projets publics}
         \subsection{Personnels}
-            \cvitemcom{Implémentation header-only d'un dynamic bitset et de ces test unitaires [\Cpp{}, Catch2]}
+            \cvitemcom{Implémentation header-only d'un dynamic bitset et de ses tests unitaires [\Cpp{}, Catch2]}
                 {\href{https://github.com/pinam45/dynamic_bitset}{dynamic\_bitset}}
             \cvitemcom{Benchmarks de différentes implémentations de dynamic bitset (WIP) [\Cpp{}, google/benchmark]}
                 {\href{https://github.com/pinam45/dynamic_bitset_benchmarks}{dynamic\_bitset\_benchmarks}}
@@ -185,13 +185,13 @@
                 {\href{https://github.com/pinam45/CMutils}{CMutils}}
             \cvitemcom{Convertisseur de base, exemple ImGui/SFML [\Cpp{}, ImGui, SFML]}
                 {\href{https://github.com/pinam45/BaseConverter}{BaseConverter}}
-            \cvitemcom{Librairie graphique en console pour systèmes basé Unix et Windows [C]}
+            \cvitemcom{Librairie graphique en console pour systèmes basés Unix et Windows [C]}
                 {\href{https://github.com/pinam45/ConsoleControl}{ConsoleControl}}
             \cvitemcom{Dungeon crawler avec niveaux à génération procédurale [Java, JavaFx]}
                 {\href{https://github.com/TiWinDeTea/Raoul-the-Game}{Raoul-the-Game}}
             \cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z de la 1\textsuperscript{ère} et 4\textsuperscript{ème} de couverture des rapports de stage UTBM}
                 {\href{https://github.com/pinam45/utbm-latex-internship-report-covers}{utbm-latex-internship-report-covers}}
-            \cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z Beamer du theme pour présentations UTBM}
+            \cvitemcom{Implémentation \LaTeX{}/Ti\textit{k}Z Beamer du thème pour présentations UTBM}
                 {\href{https://github.com/pinam45/utbm-beamer-theme}{utbm-beamer-theme}}
             % \cvitemcom{Jeu type Snake multijoueur (réseau local) [\Cpp{}, SFML]}
             %     {\href{https://github.com/TiWinDeTea/PapraGame}{PapraGame}}
@@ -199,23 +199,23 @@
             \cvitemcom{Calculateur d'hyperplans dans des géométries finies de dimension 4 (orienté performances) [\Cpp{}] \cite{Boulmier2019}}
                 {\href{https://github.com/Lomadriel/HyperplaneFinder}{HyperplaneFinder}}
         \subsection{Stages}
-            \cvitemcom{Programme de résolution du Set Cover Problem [\Cpp{}, dynamic\_bitset, spglog, json, cxxopts] \cite{Pinard2020}}
+            \cvitemcom{Programme de résolution du USCP [\Cpp{}, dynamic\_bitset, spglog, json, cxxopts] \cite{Pinard2020}}
                 {\href{https://github.com/pinam45/USCP}{USCP}, \href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Rapport de stage}}
-            \cvitemcom{Programme de traitement des résultats du Set Cover Problem [\Cpp{}, spglog, json, cxxopts, inja] \cite{Pinard2020}}
+            \cvitemcom{Programme de traitement des résultats du USCP [\Cpp{}, spglog, json, cxxopts, inja] \cite{Pinard2020}}
                 {\href{https://github.com/pinam45/USCP}{USCP}, \href{https://github.com/pinam45/UTBM_ST50_Rapport_de_stage_IRIMAS/releases/latest}{Rapport de stage}}
-            \cvitemcom{Plugin Hex-Rays IDA de reverse-engineering collaboratif [\Cpp{}, GTest, IDA]}
+            \cvitemcom{Plugin Hex-Rays IDA Pro de reverse-engineering collaboratif [\Cpp{}, GTest, IDA]}
                 {\href{https://github.com/DGA-MI-SSI/YaCo}{YaCo}, \href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Rapport de stage}}
             \cvitemcom{Module d'assemblage/désassemblage pour code assembleur MIPS [C, Capstone, Keystone, GTest]}
                 {\href{https://github.com/pinam45/UTBM_ST40_Rapport_de_stage_DGA/releases/latest}{Rapport de stage}}
         \subsection{Universités}
-            \cvitemcom{Algorithmes pour la résolution du Set Cover Problem [\Cpp{}, spdlog, dynamic\_bitset]}
+            \cvitemcom{Algorithmes pour la résolution du USCP [\Cpp{}, spdlog, dynamic\_bitset]}
                 {\href{https://github.com/pinam45/UQAC_8INF870_Set_cover_problem}{Set\_cover\_problem}}
             \cvitem{}{~~~> Recherche exhaustive, Greedy, Branch and Bound, Recuit Simulé, Algorithme Génétique et Mémétique}
             \cvitemcom{Construction et rendu d'un objet 3D paramétrique avec OpenGL [\Cpp{}, GLFW, ImGui]}
                 {\href{https://github.com/pinam45/UTBM\_IN55\_ParametricObjectsConstruction}{ParametricObjectsConstruction}}
             \cvitemcom{Clone de MiniMetro: simulateur de gestion de métros [Java, JavaFx]}
                 {\href{https://github.com/TiWinDeTea/MagicMetro}{MagicMetro}}
-            \cvitemcom{Jeux de Pogo avec IA MinMax/AlphaBeta [\Cpp{}, ConsoleControl]}
+            \cvitemcom{Jeu de Pogo avec IA MinMax/AlphaBeta [\Cpp{}, ConsoleControl]}
                 {\href{https://github.com/pinam45/UTBM_IA41_Pogo}{Pogo}}
             %\cvlistitem{Serveur de stockage de fichiers multi-utilisateurs [\Cpp{}, SFML]}
 
@@ -242,7 +242,7 @@
     %-------------------------------------------
 
     \vspace*{\deletedSpace}
-    \section{Certifications autres}
+    \section{Autres certifications}
         \cvlistitem{Permis de conduire}{}
         \cvlistitem{Prévention et Secours Civiques de niveau 1 (PSC1)}{}
 
@@ -251,11 +251,11 @@
     %-------------------------------------------
 
     \vspace*{\deletedSpace}
-    \section{Centres d'intérêts}
+    \section{Centres d'intérêt}
         \cvline{L'informatique}
             {L'architecture des processeurs, la génération procédurale, la recherche opérationnelle, l'optimisation, la cryptographie, la sécurité et l'évolution de l'informatique quantique (veille technologique sur \href{http://links.pinard.io}{links.pinard.io})}
-        \cvline{La cinéma}
-            {200 à 250 films vu par an (diary sur \href{https://letterboxd.com/pinam45/diary/}{letterboxd})}
+        \cvline{Le cinéma}
+            {200 à 250 films vus par an (diary sur \href{https://letterboxd.com/pinam45/diary/}{letterboxd})}
         \cvline{Les sciences}
             {Les mathématiques, la simulation de système physique, la physique quantique\ldots}
         \cvline{Le sport}
